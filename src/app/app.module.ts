@@ -12,6 +12,7 @@ import {AboutusComponent} from "./aboutus/aboutus.component";
 import {ShopComponent} from "./shop/shop.component";
 import {PageComponent} from "./page/page.component";
 import {ContactComponent} from "./contact/contact.component";
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 const appRoutes: Routes = [
   {path:'header',component:HeaderComponent},
@@ -30,7 +31,7 @@ const appRoutes: Routes = [
     AboutusComponent, ShopComponent, PageComponent, ContactComponent
   ],
   imports: [
-    BrowserModule,RouterModule.forRoot(appRoutes), HttpClientModule
+    BrowserModule,RouterModule.forRoot(appRoutes), HttpClientModule, CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
