@@ -206,7 +206,7 @@ img{
   transition: all .3s ease 0s;
   visibility: hidden;
   width: 300px;
-  z-index: 3;
+  z-index: 999999;
 }
 .shopping-cart.cart-empty-title h2 {
   color: #fff;
