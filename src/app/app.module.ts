@@ -8,27 +8,29 @@ import {NavComponent} from "./nav/nav.component";
 import {RouterModule, Routes} from "@angular/router";
 import {HttpClientModule} from "@angular/common/http";
 import {HomeComponent} from "./home/home.component";
-import {AboutusComponent} from "./aboutus/aboutus.component";
+import {AboutUsComponent} from "./aboutus/aboutus.component";
 import {ShopComponent} from "./shop/shop.component";
 import {PageComponent} from "./page/page.component";
 import {ContactComponent} from "./contact/contact.component";
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import {CartComponent} from "./cart/cart.component";
 
 const appRoutes: Routes = [
   {path:'header',component:HeaderComponent},
   {path:'nav',component:NavComponent},
   {path:'footer',component:FooterComponent},
   {path:'home',component:HomeComponent},
-  {path:'aboutus',component:AboutusComponent},
+  {path:'aboutus',component:AboutUsComponent},
   {path:'shop',component:ShopComponent},
   {path:'page',component:PageComponent},
   {path:'contact',component:ContactComponent},
+  {path:'cart',component:CartComponent},
 ];
 
 @NgModule({
   declarations: [
     AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent,
-    AboutusComponent, ShopComponent, PageComponent, ContactComponent
+    AboutUsComponent, ShopComponent, PageComponent, ContactComponent,CartComponent
   ],
   imports: [
     BrowserModule,RouterModule.forRoot(appRoutes), HttpClientModule, CarouselModule
