@@ -37,3 +37,101 @@ body{
 .fa-solid fa-angle-right{
   font-size: 15px;
 }
+.map{
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+.abc-1{
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  margin-right: 20px;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 5px;
+}
+.abc-2{
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  margin-left: 10px;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 5px;
+}
+li{
+  border-bottom: 1px solid #e8e8e9;
+  float: left;
+  font-size: 13px;
+  line-height: 40px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+ul {
+  list-style: outside none none;
+  margin-right: 20px;
+  padding: 0;
+}
+.icon{
+  font-size: 16px;
+  margin-right: 5px;
+  width: 20px;
+}
+.span-contact-info{
+  font-weight: 700;
+}
+#style-form-single-1{
+  font-size: 14px;
+  margin-bottom: 16px;
+  padding: 12px 10px;
+  width: 90%;
+  color: #626262;
+  margin-left: 10px;
+}
+#style-form-single-2{
+  font-size: 14px;
+  margin-bottom: 16px;
+  padding: 12px 10px;
+  width: 95%;
+  color: #626262;
+  float: right;
+}
+.row{
+  margin-top: 20px;
+}
+#style-form-single-3{
+  font-size: 14px;
+  margin-bottom: 16px;
+  padding: 12px 10px;
+  color: #626262;
+  margin-left: 10px;
+  width: 98%;
+}
+#style-form-single-4{
+  font-size: 14px;
+  margin-bottom: 16px;
+  padding: 12px 10px;
+  color: #626262;
+  margin-left: 10px;
+  width: 98%;
+  height: 100px;
+}
+#style-form-single-5{
+  margin-left: 10px;
+  background: #252525;
+  border: medium none;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  height: 40px;
+  margin-top: 16px;
+  padding: 0 15px;
+  text-transform: uppercase;
+  width: 140px;
+  border-radius: 5px;
+}
+.style-form-single-5:hover{
+  background: #e23e57!important;
+  color: #ffffff;
+}
