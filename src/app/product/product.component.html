@@ -1,0 +1,1433 @@
+<div id="section-product">
+  <div class="breadcrumbs-section">
+    <div class="breadcrumbs">
+      <div class="container">
+        <div class="breadcrumbs-row">
+          <div class="col-lg-12">
+            <div class="breadcrumbs-inner">
+              <ul class="breadcrumb-list">
+                <li>
+                  <a href="#">Home</a>
+                </li>
+                <li>
+                  <span>Accusantium Doloremque</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="shopify-section">
+    <div class="product-main-area">
+      <div class="container">
+        <div class="product-main-area-row">
+          <div class="product-main-area-left">
+            <div class="ProductPhoto">
+              <div *ngIf="id1 === 'img1'">
+                <img  src="https://cdn.shopify.com/s/files/1/0005/2527/1103/products/1_1024x1024.jpg?v=1521019595">
+              </div>
+              <div *ngIf="id1 === 'img2'">
+                <img src="https://cdn.shopify.com/s/files/1/0005/2527/1103/products/3_1024x1024.jpg?v=1521019597">
+              </div>
+              <div *ngIf="id1 === 'img3'">
+                <img src="https://cdn.shopify.com/s/files/1/0005/2527/1103/products/2_1024x1024.jpg?v=1521019596">
+              </div>
+              <div *ngIf="id1 === 'img4'">
+                <img src="https://cdn.shopify.com/s/files/1/0005/2527/1103/products/4_1024x1024.jpg?v=1521019598">
+              </div>
+              <div *ngIf="id1 === 'img5'">
+                <img src="https://cdn.shopify.com/s/files/1/0005/2527/1103/products/5_1024x1024.jpg?v=1521019599">
+              </div>
+            </div>
+            <div class="carousel">
+              <owl-carousel-o [options]="customOptions">
+                <ng-template carouselSlide>
+                  <div class="slide">
+                    <img id="img1" (click)="tabChange1('img1')" src="https://cdn.shopify.com/s/files/1/0005/2527/1103/products/1_compact.jpg?v=1521019595">
+                  </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                  <div class="slide">
+                    <img id="img2" (click)="tabChange1('img2')" src="https://cdn.shopify.com/s/files/1/0005/2527/1103/products/3_compact.jpg?v=1521019597">
+                  </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                  <div class="slide">
+                    <img id="img3" (click)="tabChange1('img3')" src="https://cdn.shopify.com/s/files/1/0005/2527/1103/products/2_compact.jpg?v=1521019596">
+                  </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                  <div class="slide">
+                    <img id="img4" (click)="tabChange1('img4')" src="https://cdn.shopify.com/s/files/1/0005/2527/1103/products/4_compact.jpg?v=1521019598">
+                  </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                  <div class="slide">
+                    <img id="img5" (click)="tabChange1('img5')" src="https://cdn.shopify.com/s/files/1/0005/2527/1103/products/5_compact.jpg?v=1521019599">
+                  </div>
+                </ng-template>
+              </owl-carousel-o>
+            </div>
+          </div>
+          <div class="product-main-area-right">
+            <div class="product-info-main">
+              <form class="shopify-product-form" method="post">
+                <input type="hidden" name="form_type" value="product">
+                <input type="hidden" name="utf8" value="✓">
+                <div class="page-title">
+                  <h1 id="popup_cart_title">accusantium doloremque</h1>
+                </div>
+                <div class="product-reviews-summary">
+                  <span class="spr-badge" id="spr_badge_550266896447" data-rating="5.0">
+                    <span class="spr-starrating spr-badge-starrating">
+                      <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                      <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                      <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                      <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                      <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                    </span>
+                  </span>
+                </div>
+                <div class="product-info-price">
+                  <div class="price-final">
+                    <span class="new" style="color:#8dc458" id="ProductPrice">
+                      <span class="money">130.000Đ</span>
+                    </span>
+                    <del>
+                      <span id="ComparePrice" class="old">
+                        <span class="money">150.000Đ</span>
+                      </span>
+                    </del>
+                  </div>
+                </div>
+                <div class="product-add-form">
+                  <div class="quality-button cart-plus-minus product-quantity-action quantity-selector">
+                    <div class="dec qtybutton" (click)="giamsosp()">-</div>
+                    <input type="text" value="{{sosp}}" name="quantity" class="cart-plus-minus-box">
+                    <div class="inc qtybutton" (click)="tangsosp()">+</div>
+                  </div>
+                  <button class="addtocart" type="submit" name="add">
+                    <span class="addto">Add To Cart</span>
+                  </button>
+                  <a class="action--wishlist tile-actions--btn flex wishlist-btn wishlist active">
+                    <i class="fa-regular fa-heart"></i>
+                  </a>
+                </div>
+                <div class="Payment_button">
+                  <div class="shopify-payment-button">
+                    <button type="button" class="shopify-payment-button__button">Buy it now</button>
+                  </div>
+                </div>
+                <div class="product-addto-links-text">
+                  <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor...</p>
+                </div>
+                <div class="product-meta">
+                  <span class="posted-in">
+                    <span>Tag:</span>
+                    <a href="#">black</a>,
+                    <a href="#">brown</a>,
+                    <a href="#">cyan</a>
+                  </span>
+                </div>
+                <div class="single-product-sharing">
+                  <span>Share:</span>
+                  <ul>
+                    <li>
+                      <a href="#" title="Share on Facebook">
+                        <i class="fa-brands fa-facebook-f" style="font-size: 13px"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" title="Share on Twitter">
+                        <i class="fa-brands fa-twitter" style="font-size: 13px"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" title="Share on Pinterest">
+                        <i class="fa-brands fa-pinterest" style="font-size: 13px"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="custom-payment-options">
+                  <div>
+                    <p>Guaranteed safe checkout</p>
+                  </div>
+                  <div class="methods-of-payment">
+                    <img src="//cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/amazon-92e856f82cae5a564cd0f70457f11af4d58fa037cf6e5ab7adf76f6fd3b9cafe.svg" height="35" alt="amazon payments">
+                    <img src="//cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/apple_pay-f6db0077dc7c325b436ecbdcf254239100b35b70b1663bc7523d7c424901fa09.svg" height="35" alt="apple pay">
+                    <img src="//cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/bitcoin-e41278677541fc32b8d2e7fa41e61aaab2935151a6048a1d8d341162f5b93a0a.svg" height="35" alt="bitcoin">
+                    <img src="//cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/google_pay-c66a29c63facf2053bf69352982c958e9675cabea4f2f7ccec08d169d1856b31.svg" height="35" alt="google pay">
+                    <img src="//cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/paypal-49e4c1e03244b6d2de0d270ca0d22dd15da6e92cc7266e93eb43762df5aa355d.svg" height="35" alt="paypal">
+                    <img src="//cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/visa-319d545c6fd255c9aad5eeaad21fd6f7f7b4fdbdb1a35ce83b89cca12a187f00.svg" height="35" alt="visa">
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="shopify-section">
+    <div class="product-info-area">
+      <div class="container">
+        <div class="product-info-area-row">
+          <div class="col-lg-12">
+            <ul class="nav nav-tabs">
+              <li id="details" [class.active]="id === 'details'" (click)="tabChange('details')">DETAILS</li>
+              <li id="reviews" [class.active]="id === 'reviews'" (click)="tabChange('reviews')">REVIEWS</li>
+            </ul>
+            <div class="content">
+              <div class="tab-pane" *ngIf="id === 'details'">
+                <div class="tab-pane-row">
+                  <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+                  <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+                </div>
+              </div>
+              <div class="tab-pane" *ngIf="id === 'reviews'">
+                <div class="shopify-product-reviews">
+                  <div class="spr-container">
+                    <div class="spr-header">
+                      <h2 class="spr-header-title">Customer Reviews</h2>
+                      <div class="spr-summary rte">
+                        <span class="spr-starrating spr-summary-starrating">
+                          <i class="spr-icon spr-icon-star-empty fa-solid fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-solid fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-solid fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-solid fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-solid fa-star"></i>
+                        </span>
+                        <span class="spr-summary-caption">
+                          <span class="spr-summary-actions-togglereviews">Based on 1 review</span>
+                        </span>
+                        <span class="spr-summary-actions">
+                          <a href="#" class="spr-summary-actions-newreview">Write a review</a>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="spr-content">
+                      <div class="spr-reviews">
+                        <div class="spr-review">
+                          <div class="spr-review-header">
+                            <span class="spr-starratings spr-review-header-starratings" aria-label="5 of 5 stars" role="img">
+                              <i class="spr-icon spr-icon-star-empty fa-solid fa-star"></i>
+                              <i class="spr-icon spr-icon-star-empty fa-solid fa-star"></i>
+                              <i class="spr-icon spr-icon-star-empty fa-solid fa-star"></i>
+                              <i class="spr-icon spr-icon-star-empty fa-solid fa-star"></i>
+                              <i class="spr-icon spr-icon-star-empty fa-solid fa-star"></i>
+                            </span>
+                            <h3 class="spr-review-header-title">Trung</h3>
+                            <span class="spr-review-header-byline">
+                              <strong>monday</strong>
+                              on
+                              <strong>Jan 29, 2021</strong>
+                            </span>
+                          </div>
+                          <div class="spr-review-content">
+                            <p class="spr-review-content-body">Cho shop 10 điểm</p>
+                          </div>
+                          <div class="spr-review-footer rte">
+                            <a href="#" class="spr-review-reportreview">Report as Inappropriate</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="shopify-section">
+    <div class="onsaleproduct-area single-product-padding-2">
+      <div class="container">
+        <div class="onsaleproduct-area-row">
+          <div class="col-lg-12">
+            <div class="section-title">
+              <h2>RELATED PRODUCTS</h2>
+            </div>
+            <div class="saleproduct-active">
+              <owl-carousel-o [options]="customOptions">
+                <ng-template carouselSlide>
+                  <div class="slide">
+                    <div class="product-item">
+                      <div class="single-product">
+                        <span class="hot-sale sale">Sale</span>
+                        <span class="hot-sale percent">-20%</span>
+                        <div class="product-img">
+                          <a>
+                            <img src="https://cdn.shopify.com/s/files/1/0005/2527/1103/products/4_2ed3b98e-00f0-47a7-84cd-d8fa46665527_large.jpg?v=1521019676">
+                          </a>
+                        </div>
+                        <div class="product-text">
+                          <h3 class="popup_cart_title">
+                            <a href="#">Carry Bag of Leather</a>
+                          </h3>
+                          <div class="rating">
+                      <span class="spr-badge">
+                        <span class="spr-starrating spr-badge-starrating">
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                        </span>
+                      </span>
+                          </div>
+                          <div class="price">
+                            <ul>
+                              <li>
+                          <span class="new-price">
+                            <span class="money">80.000Đ</span>
+                          </span>
+                              </li>
+                              <li>
+                          <span class="old-price">
+                            <span class="money">100.000Đ</span>
+                          </span>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="link-button">
+                            <ul>
+                              <li>
+                                <a href="#" class="action-btn cart">
+                                  <i class="fa-solid fa-cart-shopping"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="action--wishlist tile-actions--btn flex wishlist-btn wishlist">
+                                  <i class="fa-regular fa-heart"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="action-btn quick-view">
+                                  <i class="fa-regular fa-eye"></i>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                  <div class="slide">
+                    <div class="product-item">
+                      <div class="single-product">
+                        <span class="hot-sale sale">Sale</span>
+                        <span class="hot-sale percent">-20%</span>
+                        <div class="product-img">
+                          <a>
+                            <img src="https://cdn.shopify.com/s/files/1/0005/2527/1103/products/3_b0bbce98-f134-472b-bd2f-00abc96b894e_large.jpg?v=1521019669">
+                          </a>
+                        </div>
+                        <div class="product-text">
+                          <h3 class="popup_cart_title">
+                            <a href="#">Carry Bag of Leather</a>
+                          </h3>
+                          <div class="rating">
+                      <span class="spr-badge">
+                        <span class="spr-starrating spr-badge-starrating">
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                        </span>
+                      </span>
+                          </div>
+                          <div class="price">
+                            <ul>
+                              <li>
+                          <span class="new-price">
+                            <span class="money">80.000Đ</span>
+                          </span>
+                              </li>
+                              <li>
+                          <span class="old-price">
+                            <span class="money">100.000Đ</span>
+                          </span>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="link-button">
+                            <ul>
+                              <li>
+                                <a href="#" class="action-btn cart">
+                                  <i class="fa-solid fa-cart-shopping"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="action--wishlist tile-actions--btn flex wishlist-btn wishlist">
+                                  <i class="fa-regular fa-heart"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="action-btn quick-view">
+                                  <i class="fa-regular fa-eye"></i>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                  <div class="slide">
+                    <div class="product-item">
+                      <div class="single-product">
+                        <span class="hot-sale sale">Sale</span>
+                        <span class="hot-sale percent">-20%</span>
+                        <div class="product-img">
+                          <a>
+                            <img src="https://cdn.shopify.com/s/files/1/0005/2527/1103/products/1_large.jpg?v=1521019595">
+                          </a>
+                        </div>
+                        <div class="product-text">
+                          <h3 class="popup_cart_title">
+                            <a href="#">Carry Bag of Leather</a>
+                          </h3>
+                          <div class="rating">
+                      <span class="spr-badge">
+                        <span class="spr-starrating spr-badge-starrating">
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                        </span>
+                      </span>
+                          </div>
+                          <div class="price">
+                            <ul>
+                              <li>
+                          <span class="new-price">
+                            <span class="money">80.000Đ</span>
+                          </span>
+                              </li>
+                              <li>
+                          <span class="old-price">
+                            <span class="money">100.000Đ</span>
+                          </span>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="link-button">
+                            <ul>
+                              <li>
+                                <a href="#" class="action-btn cart">
+                                  <i class="fa-solid fa-cart-shopping"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="action--wishlist tile-actions--btn flex wishlist-btn wishlist">
+                                  <i class="fa-regular fa-heart"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="action-btn quick-view">
+                                  <i class="fa-regular fa-eye"></i>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                  <div class="slide">
+                    <div class="product-item">
+                      <div class="single-product">
+                        <span class="hot-sale sale">Sale</span>
+                        <span class="hot-sale percent">-20%</span>
+                        <div class="product-img">
+                          <a>
+                            <img src="https://cdn.shopify.com/s/files/1/0005/2527/1103/products/2_5fa2e27e-a58f-4f70-b301-df0b55fd5d6c_large.jpg?v=1521019660">
+                          </a>
+                        </div>
+                        <div class="product-text">
+                          <h3 class="popup_cart_title">
+                            <a href="#">Carry Bag of Leather</a>
+                          </h3>
+                          <div class="rating">
+                      <span class="spr-badge">
+                        <span class="spr-starrating spr-badge-starrating">
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                        </span>
+                      </span>
+                          </div>
+                          <div class="price">
+                            <ul>
+                              <li>
+                          <span class="new-price">
+                            <span class="money">80.000Đ</span>
+                          </span>
+                              </li>
+                              <li>
+                          <span class="old-price">
+                            <span class="money">100.000Đ</span>
+                          </span>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="link-button">
+                            <ul>
+                              <li>
+                                <a href="#" class="action-btn cart">
+                                  <i class="fa-solid fa-cart-shopping"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="action--wishlist tile-actions--btn flex wishlist-btn wishlist">
+                                  <i class="fa-regular fa-heart"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="action-btn quick-view">
+                                  <i class="fa-regular fa-eye"></i>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                  <div class="slide">
+                    <div class="product-item">
+                      <div class="single-product">
+                        <span class="hot-sale sale">Sale</span>
+                        <span class="hot-sale percent">-20%</span>
+                        <div class="product-img">
+                          <a>
+                            <img src="https://cdn.shopify.com/s/files/1/0005/2527/1103/products/21_a7633845-691e-4357-8940-62abf5199571_large.jpg?v=1521020079">
+                          </a>
+                        </div>
+                        <div class="product-text">
+                          <h3 class="popup_cart_title">
+                            <a href="#">Carry Bag of Leather</a>
+                          </h3>
+                          <div class="rating">
+                      <span class="spr-badge">
+                        <span class="spr-starrating spr-badge-starrating">
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                        </span>
+                      </span>
+                          </div>
+                          <div class="price">
+                            <ul>
+                              <li>
+                                <span class="new-price">
+                                  <span class="money">80.000Đ</span>
+                                </span>
+                              </li>
+                              <li>
+                                <span class="old-price">
+                                  <span class="money">100.000Đ</span>
+                                </span>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="link-button">
+                            <ul>
+                              <li>
+                                <a href="#" class="action-btn cart">
+                                  <i class="fa-solid fa-cart-shopping"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="action--wishlist tile-actions--btn flex wishlist-btn wishlist">
+                                  <i class="fa-regular fa-heart"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="action-btn quick-view">
+                                  <i class="fa-regular fa-eye"></i>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                  <div class="slide">
+                    <div class="product-item">
+                      <div class="single-product">
+                        <span class="hot-sale sale">Sale</span>
+                        <span class="hot-sale percent">-20%</span>
+                        <div class="product-img">
+                          <a>
+                            <img src="https://cdn.shopify.com/s/files/1/0005/2527/1103/products/21_a7633845-691e-4357-8940-62abf5199571_large.jpg?v=1521020079">
+                          </a>
+                        </div>
+                        <div class="product-text">
+                          <h3 class="popup_cart_title">
+                            <a href="#">Carry Bag of Leather</a>
+                          </h3>
+                          <div class="rating">
+                      <span class="spr-badge">
+                        <span class="spr-starrating spr-badge-starrating">
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                        </span>
+                      </span>
+                          </div>
+                          <div class="price">
+                            <ul>
+                              <li>
+                          <span class="new-price">
+                            <span class="money">80.000Đ</span>
+                          </span>
+                              </li>
+                              <li>
+                          <span class="old-price">
+                            <span class="money">100.000Đ</span>
+                          </span>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="link-button">
+                            <ul>
+                              <li>
+                                <a href="#" class="action-btn cart">
+                                  <i class="fa-solid fa-cart-shopping"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="action--wishlist tile-actions--btn flex wishlist-btn wishlist">
+                                  <i class="fa-regular fa-heart"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="action-btn quick-view">
+                                  <i class="fa-regular fa-eye"></i>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                  <div class="slide">
+                    <div class="product-item">
+                      <div class="single-product">
+                        <span class="hot-sale sale">Sale</span>
+                        <span class="hot-sale percent">-20%</span>
+                        <div class="product-img">
+                          <a>
+                            <img src="https://cdn.shopify.com/s/files/1/0005/2527/1103/products/21_a7633845-691e-4357-8940-62abf5199571_large.jpg?v=1521020079">
+                          </a>
+                        </div>
+                        <div class="product-text">
+                          <h3 class="popup_cart_title">
+                            <a href="#">Carry Bag of Leather</a>
+                          </h3>
+                          <div class="rating">
+                      <span class="spr-badge">
+                        <span class="spr-starrating spr-badge-starrating">
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                        </span>
+                      </span>
+                          </div>
+                          <div class="price">
+                            <ul>
+                              <li>
+                          <span class="new-price">
+                            <span class="money">80.000Đ</span>
+                          </span>
+                              </li>
+                              <li>
+                          <span class="old-price">
+                            <span class="money">100.000Đ</span>
+                          </span>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="link-button">
+                            <ul>
+                              <li>
+                                <a href="#" class="action-btn cart">
+                                  <i class="fa-solid fa-cart-shopping"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="action--wishlist tile-actions--btn flex wishlist-btn wishlist">
+                                  <i class="fa-regular fa-heart"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="action-btn quick-view">
+                                  <i class="fa-regular fa-eye"></i>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                  <div class="slide">
+                    <div class="product-item">
+                      <div class="single-product">
+                        <span class="hot-sale sale">Sale</span>
+                        <span class="hot-sale percent">-20%</span>
+                        <div class="product-img">
+                          <a>
+                            <img src="https://cdn.shopify.com/s/files/1/0005/2527/1103/products/21_a7633845-691e-4357-8940-62abf5199571_large.jpg?v=1521020079">
+                          </a>
+                        </div>
+                        <div class="product-text">
+                          <h3 class="popup_cart_title">
+                            <a href="#">Carry Bag of Leather</a>
+                          </h3>
+                          <div class="rating">
+                      <span class="spr-badge">
+                        <span class="spr-starrating spr-badge-starrating">
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                        </span>
+                      </span>
+                          </div>
+                          <div class="price">
+                            <ul>
+                              <li>
+                          <span class="new-price">
+                            <span class="money">80.000Đ</span>
+                          </span>
+                              </li>
+                              <li>
+                          <span class="old-price">
+                            <span class="money">100.000Đ</span>
+                          </span>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="link-button">
+                            <ul>
+                              <li>
+                                <a href="#" class="action-btn cart">
+                                  <i class="fa-solid fa-cart-shopping"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="action--wishlist tile-actions--btn flex wishlist-btn wishlist">
+                                  <i class="fa-regular fa-heart"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="action-btn quick-view">
+                                  <i class="fa-regular fa-eye"></i>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                  <div class="slide">
+                    <div class="product-item">
+                      <div class="single-product">
+                        <span class="hot-sale sale">Sale</span>
+                        <span class="hot-sale percent">-20%</span>
+                        <div class="product-img">
+                          <a>
+                            <img src="https://cdn.shopify.com/s/files/1/0005/2527/1103/products/21_a7633845-691e-4357-8940-62abf5199571_large.jpg?v=1521020079">
+                          </a>
+                        </div>
+                        <div class="product-text">
+                          <h3 class="popup_cart_title">
+                            <a href="#">Carry Bag of Leather</a>
+                          </h3>
+                          <div class="rating">
+                      <span class="spr-badge">
+                        <span class="spr-starrating spr-badge-starrating">
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                        </span>
+                      </span>
+                          </div>
+                          <div class="price">
+                            <ul>
+                              <li>
+                          <span class="new-price">
+                            <span class="money">80.000Đ</span>
+                          </span>
+                              </li>
+                              <li>
+                          <span class="old-price">
+                            <span class="money">100.000Đ</span>
+                          </span>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="link-button">
+                            <ul>
+                              <li>
+                                <a href="#" class="action-btn cart">
+                                  <i class="fa-solid fa-cart-shopping"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="action--wishlist tile-actions--btn flex wishlist-btn wishlist">
+                                  <i class="fa-regular fa-heart"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="action-btn quick-view">
+                                  <i class="fa-regular fa-eye"></i>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+              </owl-carousel-o>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="shopify-section">
+    <div class="onsaleproduct-area single-product-padding-2">
+      <div class="container">
+        <div class="onsaleproduct-area-row">
+          <div class="col-lg-12">
+            <div class="section-title">
+              <h2>UNSELL PRODUCTS</h2>
+            </div>
+            <div class="saleproduct-active">
+              <owl-carousel-o [options]="customOptions">
+                <ng-template carouselSlide>
+                  <div class="slide">
+                    <div class="product-item">
+                      <div class="single-product">
+                        <span class="hot-sale sale">Sale</span>
+                        <span class="hot-sale percent">-20%</span>
+                        <div class="product-img">
+                          <a>
+                            <img src="https://cdn.shopify.com/s/files/1/0005/2527/1103/products/4_2ed3b98e-00f0-47a7-84cd-d8fa46665527_large.jpg?v=1521019676">
+                          </a>
+                        </div>
+                        <div class="product-text">
+                          <h3 class="popup_cart_title">
+                            <a href="#">Carry Bag of Leather</a>
+                          </h3>
+                          <div class="rating">
+                      <span class="spr-badge">
+                        <span class="spr-starrating spr-badge-starrating">
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                        </span>
+                      </span>
+                          </div>
+                          <div class="price">
+                            <ul>
+                              <li>
+                          <span class="new-price">
+                            <span class="money">80.000Đ</span>
+                          </span>
+                              </li>
+                              <li>
+                          <span class="old-price">
+                            <span class="money">100.000Đ</span>
+                          </span>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="link-button">
+                            <ul>
+                              <li>
+                                <a href="#" class="action-btn cart">
+                                  <i class="fa-solid fa-cart-shopping"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="action--wishlist tile-actions--btn flex wishlist-btn wishlist">
+                                  <i class="fa-regular fa-heart"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="action-btn quick-view">
+                                  <i class="fa-regular fa-eye"></i>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                  <div class="slide">
+                    <div class="product-item">
+                      <div class="single-product">
+                        <span class="hot-sale sale">Sale</span>
+                        <span class="hot-sale percent">-20%</span>
+                        <div class="product-img">
+                          <a>
+                            <img src="https://cdn.shopify.com/s/files/1/0005/2527/1103/products/3_b0bbce98-f134-472b-bd2f-00abc96b894e_large.jpg?v=1521019669">
+                          </a>
+                        </div>
+                        <div class="product-text">
+                          <h3 class="popup_cart_title">
+                            <a href="#">Carry Bag of Leather</a>
+                          </h3>
+                          <div class="rating">
+                      <span class="spr-badge">
+                        <span class="spr-starrating spr-badge-starrating">
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                        </span>
+                      </span>
+                          </div>
+                          <div class="price">
+                            <ul>
+                              <li>
+                          <span class="new-price">
+                            <span class="money">80.000Đ</span>
+                          </span>
+                              </li>
+                              <li>
+                          <span class="old-price">
+                            <span class="money">100.000Đ</span>
+                          </span>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="link-button">
+                            <ul>
+                              <li>
+                                <a href="#" class="action-btn cart">
+                                  <i class="fa-solid fa-cart-shopping"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="action--wishlist tile-actions--btn flex wishlist-btn wishlist">
+                                  <i class="fa-regular fa-heart"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="action-btn quick-view">
+                                  <i class="fa-regular fa-eye"></i>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                  <div class="slide">
+                    <div class="product-item">
+                      <div class="single-product">
+                        <span class="hot-sale sale">Sale</span>
+                        <span class="hot-sale percent">-20%</span>
+                        <div class="product-img">
+                          <a>
+                            <img src="https://cdn.shopify.com/s/files/1/0005/2527/1103/products/1_large.jpg?v=1521019595">
+                          </a>
+                        </div>
+                        <div class="product-text">
+                          <h3 class="popup_cart_title">
+                            <a href="#">Carry Bag of Leather</a>
+                          </h3>
+                          <div class="rating">
+                      <span class="spr-badge">
+                        <span class="spr-starrating spr-badge-starrating">
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                        </span>
+                      </span>
+                          </div>
+                          <div class="price">
+                            <ul>
+                              <li>
+                          <span class="new-price">
+                            <span class="money">80.000Đ</span>
+                          </span>
+                              </li>
+                              <li>
+                          <span class="old-price">
+                            <span class="money">100.000Đ</span>
+                          </span>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="link-button">
+                            <ul>
+                              <li>
+                                <a href="#" class="action-btn cart">
+                                  <i class="fa-solid fa-cart-shopping"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="action--wishlist tile-actions--btn flex wishlist-btn wishlist">
+                                  <i class="fa-regular fa-heart"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="action-btn quick-view">
+                                  <i class="fa-regular fa-eye"></i>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                  <div class="slide">
+                    <div class="product-item">
+                      <div class="single-product">
+                        <span class="hot-sale sale">Sale</span>
+                        <span class="hot-sale percent">-20%</span>
+                        <div class="product-img">
+                          <a>
+                            <img src="https://cdn.shopify.com/s/files/1/0005/2527/1103/products/2_5fa2e27e-a58f-4f70-b301-df0b55fd5d6c_large.jpg?v=1521019660">
+                          </a>
+                        </div>
+                        <div class="product-text">
+                          <h3 class="popup_cart_title">
+                            <a href="#">Carry Bag of Leather</a>
+                          </h3>
+                          <div class="rating">
+                      <span class="spr-badge">
+                        <span class="spr-starrating spr-badge-starrating">
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                        </span>
+                      </span>
+                          </div>
+                          <div class="price">
+                            <ul>
+                              <li>
+                          <span class="new-price">
+                            <span class="money">80.000Đ</span>
+                          </span>
+                              </li>
+                              <li>
+                          <span class="old-price">
+                            <span class="money">100.000Đ</span>
+                          </span>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="link-button">
+                            <ul>
+                              <li>
+                                <a href="#" class="action-btn cart">
+                                  <i class="fa-solid fa-cart-shopping"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="action--wishlist tile-actions--btn flex wishlist-btn wishlist">
+                                  <i class="fa-regular fa-heart"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="action-btn quick-view">
+                                  <i class="fa-regular fa-eye"></i>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                  <div class="slide">
+                    <div class="product-item">
+                      <div class="single-product">
+                        <span class="hot-sale sale">Sale</span>
+                        <span class="hot-sale percent">-20%</span>
+                        <div class="product-img">
+                          <a>
+                            <img src="https://cdn.shopify.com/s/files/1/0005/2527/1103/products/21_a7633845-691e-4357-8940-62abf5199571_large.jpg?v=1521020079">
+                          </a>
+                        </div>
+                        <div class="product-text">
+                          <h3 class="popup_cart_title">
+                            <a href="#">Carry Bag of Leather</a>
+                          </h3>
+                          <div class="rating">
+                      <span class="spr-badge">
+                        <span class="spr-starrating spr-badge-starrating">
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                        </span>
+                      </span>
+                          </div>
+                          <div class="price">
+                            <ul>
+                              <li>
+                                <span class="new-price">
+                                  <span class="money">80.000Đ</span>
+                                </span>
+                              </li>
+                              <li>
+                                <span class="old-price">
+                                  <span class="money">100.000Đ</span>
+                                </span>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="link-button">
+                            <ul>
+                              <li>
+                                <a href="#" class="action-btn cart">
+                                  <i class="fa-solid fa-cart-shopping"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="action--wishlist tile-actions--btn flex wishlist-btn wishlist">
+                                  <i class="fa-regular fa-heart"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="action-btn quick-view">
+                                  <i class="fa-regular fa-eye"></i>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                  <div class="slide">
+                    <div class="product-item">
+                      <div class="single-product">
+                        <span class="hot-sale sale">Sale</span>
+                        <span class="hot-sale percent">-20%</span>
+                        <div class="product-img">
+                          <a>
+                            <img src="https://cdn.shopify.com/s/files/1/0005/2527/1103/products/21_a7633845-691e-4357-8940-62abf5199571_large.jpg?v=1521020079">
+                          </a>
+                        </div>
+                        <div class="product-text">
+                          <h3 class="popup_cart_title">
+                            <a href="#">Carry Bag of Leather</a>
+                          </h3>
+                          <div class="rating">
+                      <span class="spr-badge">
+                        <span class="spr-starrating spr-badge-starrating">
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                        </span>
+                      </span>
+                          </div>
+                          <div class="price">
+                            <ul>
+                              <li>
+                          <span class="new-price">
+                            <span class="money">80.000Đ</span>
+                          </span>
+                              </li>
+                              <li>
+                          <span class="old-price">
+                            <span class="money">100.000Đ</span>
+                          </span>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="link-button">
+                            <ul>
+                              <li>
+                                <a href="#" class="action-btn cart">
+                                  <i class="fa-solid fa-cart-shopping"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="action--wishlist tile-actions--btn flex wishlist-btn wishlist">
+                                  <i class="fa-regular fa-heart"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="action-btn quick-view">
+                                  <i class="fa-regular fa-eye"></i>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                  <div class="slide">
+                    <div class="product-item">
+                      <div class="single-product">
+                        <span class="hot-sale sale">Sale</span>
+                        <span class="hot-sale percent">-20%</span>
+                        <div class="product-img">
+                          <a>
+                            <img src="https://cdn.shopify.com/s/files/1/0005/2527/1103/products/21_a7633845-691e-4357-8940-62abf5199571_large.jpg?v=1521020079">
+                          </a>
+                        </div>
+                        <div class="product-text">
+                          <h3 class="popup_cart_title">
+                            <a href="#">Carry Bag of Leather</a>
+                          </h3>
+                          <div class="rating">
+                      <span class="spr-badge">
+                        <span class="spr-starrating spr-badge-starrating">
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                        </span>
+                      </span>
+                          </div>
+                          <div class="price">
+                            <ul>
+                              <li>
+                          <span class="new-price">
+                            <span class="money">80.000Đ</span>
+                          </span>
+                              </li>
+                              <li>
+                          <span class="old-price">
+                            <span class="money">100.000Đ</span>
+                          </span>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="link-button">
+                            <ul>
+                              <li>
+                                <a href="#" class="action-btn cart">
+                                  <i class="fa-solid fa-cart-shopping"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="action--wishlist tile-actions--btn flex wishlist-btn wishlist">
+                                  <i class="fa-regular fa-heart"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="action-btn quick-view">
+                                  <i class="fa-regular fa-eye"></i>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                  <div class="slide">
+                    <div class="product-item">
+                      <div class="single-product">
+                        <span class="hot-sale sale">Sale</span>
+                        <span class="hot-sale percent">-20%</span>
+                        <div class="product-img">
+                          <a>
+                            <img src="https://cdn.shopify.com/s/files/1/0005/2527/1103/products/21_a7633845-691e-4357-8940-62abf5199571_large.jpg?v=1521020079">
+                          </a>
+                        </div>
+                        <div class="product-text">
+                          <h3 class="popup_cart_title">
+                            <a href="#">Carry Bag of Leather</a>
+                          </h3>
+                          <div class="rating">
+                      <span class="spr-badge">
+                        <span class="spr-starrating spr-badge-starrating">
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                        </span>
+                      </span>
+                          </div>
+                          <div class="price">
+                            <ul>
+                              <li>
+                          <span class="new-price">
+                            <span class="money">80.000Đ</span>
+                          </span>
+                              </li>
+                              <li>
+                          <span class="old-price">
+                            <span class="money">100.000Đ</span>
+                          </span>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="link-button">
+                            <ul>
+                              <li>
+                                <a href="#" class="action-btn cart">
+                                  <i class="fa-solid fa-cart-shopping"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="action--wishlist tile-actions--btn flex wishlist-btn wishlist">
+                                  <i class="fa-regular fa-heart"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="action-btn quick-view">
+                                  <i class="fa-regular fa-eye"></i>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                  <div class="slide">
+                    <div class="product-item">
+                      <div class="single-product">
+                        <span class="hot-sale sale">Sale</span>
+                        <span class="hot-sale percent">-20%</span>
+                        <div class="product-img">
+                          <a>
+                            <img src="https://cdn.shopify.com/s/files/1/0005/2527/1103/products/21_a7633845-691e-4357-8940-62abf5199571_large.jpg?v=1521020079">
+                          </a>
+                        </div>
+                        <div class="product-text">
+                          <h3 class="popup_cart_title">
+                            <a href="#">Carry Bag of Leather</a>
+                          </h3>
+                          <div class="rating">
+                      <span class="spr-badge">
+                        <span class="spr-starrating spr-badge-starrating">
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-regular fa-star"></i>
+                        </span>
+                      </span>
+                          </div>
+                          <div class="price">
+                            <ul>
+                              <li>
+                          <span class="new-price">
+                            <span class="money">80.000Đ</span>
+                          </span>
+                              </li>
+                              <li>
+                          <span class="old-price">
+                            <span class="money">100.000Đ</span>
+                          </span>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="link-button">
+                            <ul>
+                              <li>
+                                <a href="#" class="action-btn cart">
+                                  <i class="fa-solid fa-cart-shopping"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="action--wishlist tile-actions--btn flex wishlist-btn wishlist">
+                                  <i class="fa-regular fa-heart"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#" class="action-btn quick-view">
+                                  <i class="fa-regular fa-eye"></i>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+              </owl-carousel-o>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
