@@ -14,10 +14,11 @@ import {PageComponent} from "./page/page.component";
 import {ContactComponent} from "./contact/contact.component";
 import {RegisterComponent} from "./register/register.component";
 import {SigninComponent} from "./signin/signin.component";
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import {CartComponent} from "./cart/cart.component";
 import {ProductComponent} from "./product/product.component";
 import {MywishlistComponent} from "./mywishlist/mywishlist.component";
 import {WishlistComponent} from "./wishlist/wishlist.component";
-import { CarouselModule } from 'ngx-owl-carousel-o';
 
 const appRoutes: Routes = [
   {path:'header',component:HeaderComponent},
@@ -30,6 +31,7 @@ const appRoutes: Routes = [
   {path:'contact',component:ContactComponent},
   {path:'signin',component:SigninComponent},
   {path:'register',component:RegisterComponent},
+  {path:'cart',component:CartComponent},
   {path:'product',component:ProductComponent},
   {path:'mywishlist',component:MywishlistComponent},
   {path:'wishlist',component:WishlistComponent},
@@ -38,8 +40,7 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent,
-    AboutusComponent, ShopComponent, PageComponent, ContactComponent , RegisterComponent ,SigninComponent ,ProductComponent ,MywishlistComponent,
-    WishlistComponent
+    AboutusComponent, ShopComponent, PageComponent, ContactComponent , RegisterComponent ,SigninComponent ,CartComponent,ProductComponent,MywishlistComponent,WishlistComponent
   ],
   imports: [
     BrowserModule,RouterModule.forRoot(appRoutes), HttpClientModule, CarouselModule

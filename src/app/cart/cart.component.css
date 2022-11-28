@@ -336,3 +336,224 @@ a {
   transition: all .3s ease 0s;
   text-decoration: none;
 }
+.table-responsive {
+  overflow-x: auto;
+  min-height: 0.01%;
+}
+.table-content table {
+  text-align: center;
+}
+.table-content table {
+  background: #fff none repeat scroll 0 0;
+  border-color: #e5e5e5;
+  border-radius: 0;
+  border-style: solid;
+  border-width: 1px 0 0 1px;
+  margin: 0 0 50px;
+  text-align: center;
+  width: 100%;
+}
+table {
+  background-color: transparent;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}tr {
+   display: table-row;
+   vertical-align: inherit;
+   border-color: inherit;
+ }
+th {
+  display: table-cell;
+  vertical-align: inherit;
+  font-weight: bold;
+}
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+.table-content table td.product-thumbnail {
+  width: 130px;
+}
+.table-content table td {
+  border-top: medium none;
+  font-size: 13px;
+  padding: 20px 10px;
+  vertical-align: middle;
+}
+.table-content table th, .table-content table td {
+  border-bottom: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+}
+.cart-table td, .cart-table th {
+  padding: 30px 15px;
+  border: none;
+}
+tbody tr td {
+  text-align: center;
+}
+td, th {
+  padding: 0;
+}
+th, td {
+  text-align: left;
+  padding: 15px;
+  border: 1px solid #e5e5e5;
+}
+.table-content table td.product-name a {
+  color: #6f6f6f;
+  font-size: 14px;
+  font-weight: 700;
+  margin-left: 10px;
+  text-decoration: none;
+  transition: .3s;
+}
+.product-name a {
+  color: #777;
+  transition: .3s;
+}
+a {
+  background-color: transparent;
+}
+img[_ngcontent-rxn-c33] {
+  max-width: 100%;
+}
+.table-content table td.product-price {
+  width: 130px;
+}
+.table-content table .product-price .amount {
+  font-size: 15px;
+  font-weight: 700;
+}
+.table-content table td.product-quantity {
+  width: 180px;
+}
+.table-content table td input {
+  background: #e5e5e5 none repeat scroll 0 0;
+  border: medium none;
+  border-radius: 3px;
+  color: #6f6f6f;
+  font-size: 15px;
+  font-weight: 400;
+  height: 40px;
+  padding: 0 9px;
+  width: 48px;
+  margin: 0 50px;
+}
+.table-content table td input {
+  background: #e5e5e5 none repeat scroll 0 0;
+  border: medium none;
+  border-radius: 3px;
+  color: #6f6f6f;
+  font-size: 15px;
+  font-weight: 400;
+  height: 40px;
+  padding: 0 5px 0 10px;
+  width: 60px;
+}
+input, button, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  outline: none;
+}
+input, button, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+input {
+  line-height: normal;
+}
+button, input, optgroup, select, textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+input, textarea, select {
+  border: 1px solid #e5e5e5;
+  max-width: 100%;
+  padding: 8px 10px;
+  border-radius: 3px;
+}
+button, input, textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+input, textarea, button, select {
+  padding: 0;
+  margin: 0;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+body, input, textarea, button, select {
+  font-size: 14px;
+  line-height: 1.6;
+  font-family: HelveticaNeue,Helvetica Neue,Helvetica,Arial,sans-serif;
+  color: #333;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+*, input, :before, :after {
+  box-sizing: border-box;
+}
+.table-content table td.product-subtotal {
+  font-size: 14px;
+  font-weight: 700;
+  width: 120px;
+}
+.table-content table td.product-remove {
+  width: 150px;
+}
+a {
+  transition: all .3s ease 0s;
+  text-decoration: none;
+}
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+a {
+  background-color: transparent;
+}
+a, .text-link {
+  color: #747474;
+  text-decoration: none;
+  background: transparent;
+}
+a:hover {
+  color: #ec4445;
+  text-decoration: none;
+}
+a:active, a:hover {
+  outline: 0 none;
+}
+a:focus {outline:0px solid}
+.table-content table td.product-remove i {
+  color: #919191;
+  display: inline-block;
+  font-size: 20px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  width: 40px;
+  transition: .3s;
+}
+.table-content table td.product-remove i:hover{
+  color:#e23e57;
+}
