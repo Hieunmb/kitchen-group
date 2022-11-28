@@ -15,6 +15,8 @@ import {ContactComponent} from "./contact/contact.component";
 import {RegisterComponent} from "./register/register.component";
 import {SigninComponent} from "./signin/signin.component";
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import {ProductComponent} from "./product/product.component";
+import {CartComponent} from "./cart/cart.component";
 
 const appRoutes: Routes = [
   {path:'header',component:HeaderComponent},
@@ -27,12 +29,14 @@ const appRoutes: Routes = [
   {path:'contact',component:ContactComponent},
   {path:'signin',component:SigninComponent},
   {path:'register',component:RegisterComponent},
+  {path:'product',component:ProductComponent},
+  {path:'cart',component:CartComponent},
 ];
 
 @NgModule({
   declarations: [
     AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent,
-    AboutusComponent, ShopComponent, PageComponent, ContactComponent , RegisterComponent ,SigninComponent
+    AboutusComponent, ShopComponent, PageComponent, ContactComponent , RegisterComponent ,SigninComponent, ProductComponent, CartComponent
   ],
   imports: [
     BrowserModule,RouterModule.forRoot(appRoutes), HttpClientModule, CarouselModule
