@@ -30,7 +30,7 @@ export class ProductComponent{
         items: 1
       },
       400: {
-        items: 4
+        items: 3
       },
       740: {
         items: 5
