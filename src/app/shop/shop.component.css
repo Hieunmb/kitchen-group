@@ -136,6 +136,8 @@ form {
   background: #fff none repeat scroll 0 0;
   border: 1px solid #e5e5e5;
   padding: 20px;
+  overflow-y: auto;
+  max-height: 500px;
 }
 .sidebar-list-style {
   display: flex;
@@ -303,7 +305,8 @@ select {
   object-fit: contain;
 }
 .single-product .product-img a img {
-  width: 100%;
+  width: 145px;
+  height: 168px;
 }
 .single-product .product-text h3 {
   margin: 8px 0;
@@ -315,6 +318,13 @@ select {
   font-size: 14px;
   text-transform: capitalize;
   font-weight: 400;
+  height: 36px;
+  overflow: hidden;
+  display: block;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
 }
 .single-product .product-text .rating {
   height: 30px;

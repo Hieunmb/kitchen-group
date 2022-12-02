@@ -18,7 +18,9 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import {CartComponent} from "./cart/cart.component";
 import {ProductComponent} from "./product/product.component";
 import {MywishlistComponent} from "./mywishlist/mywishlist.component";
-
+import {WishlistComponent} from "./wishlist/wishlist.component";
+import {DeliveryComponent} from "./delivery/delivery.component";
+import {TermsandconditionComponent} from "./termsandcondition/termsandcondition.component";
 
 const appRoutes: Routes = [
   {path:'header',component:HeaderComponent},
@@ -34,12 +36,16 @@ const appRoutes: Routes = [
   {path:'cart',component:CartComponent},
   {path:'home/product',component:ProductComponent},
   {path:'mywishlist',component:MywishlistComponent},
+  {path:'wishlist',component:WishlistComponent},
+  {path:'delivery',component:DeliveryComponent},
+  {path:'page/termsandcondition',component:TermsandconditionComponent},
 ];
 
 @NgModule({
   declarations: [
     AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent,
-    AboutusComponent, ShopComponent, PageComponent, ContactComponent , RegisterComponent ,SigninComponent ,CartComponent,ProductComponent,MywishlistComponent,
+    AboutusComponent, ShopComponent, PageComponent, ContactComponent , RegisterComponent ,SigninComponent ,
+    CartComponent,ProductComponent,MywishlistComponent,WishlistComponent, DeliveryComponent, TermsandconditionComponent
   ],
   imports: [
     BrowserModule,RouterModule.forRoot(appRoutes), HttpClientModule, CarouselModule
