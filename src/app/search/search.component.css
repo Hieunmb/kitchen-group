@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #fff;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  text-align: left;
+  font-weight: 400;
+  line-height: 1.35;
+}
+a{
+  text-decoration: none;
+  color: black;
+  transition: all .3s ease 0s;
+}
+li{
+  list-style: none;
+  margin-bottom: 3.5px;
+}
+ul {
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+}
+img{
+  max-width: 100%;
+}
+.section{
+  float: left;
+  width: 100%;
+}
+.container{
+  width: 1200px;
+  float: none;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-family: Poppins,sans-serif;
+}
+h1 h2 h3 h4 h5 h6 {
+  margin: 0 0 10px;
+  font-family: Poppins,sans-serif;
+  color: #333;
+}
+.text-center {
+  text-align: center!important;
+}
+.text-left {
+  text-align: left!important;
+}
+.text-right {
+  text-align: right!important;
+}
+.col-lg-12 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.shopify-section {
+  font-family: Poppins,sans-serif;
+  background-color: #fff;
+}
+.mb-50 {
+  margin-bottom: 50px;
+}
+.mb-40 {
+  margin-bottom: 40px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+/* Breadcrumb */
+.breadcrumbs {
+  padding: 15px 0;
+  background-color: #f1f1f1;
+}
+.breadcrumbs-row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.breadcrumb-list>li {
+  color: #999;
+  display: inline-block;
+}
+.breadcrumb-list>li>a {
+  position: relative;
+  margin-right: 20px;
+}
+.breadcrumb-list > li > a {
+  color: #e23e57;
+}
+.breadcrumb-list>li>a:before {
+  position: absolute;
+  content: ">";
+  font-size: 18px;
+  top: -2px;
+  right: -13px;
+  left: auto;
+}
+
+/* product-section */
+.product-section {
+  padding: 80px 0;
+}
+.product-section-row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.col-lg-offset-2 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 16.66666667%;
+  width: 66.66666667%;
+}
+.search-title {
+  margin: 0 0 10px;
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+/**/
+.hr--clear {
+  border-top-color: transparent;
+}
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+.products-grid-2 {
+  padding: 20px;
+  background: #fff none repeat scroll 0 0;
+  border-bottom: 1px solid #f1f1f1;
+  overflow: hidden;
+}
+.mb-30 {
+  margin-bottom: 30px;
+}
+.single-product-2 {
+  overflow: hidden;
+}
+
+.single-product-2 {
+  float: left;
+  position: relative;
+  width: 35%;
+}
+.single-product-2 .product-img a img {
+  width: 100%;
+}
+.product-text-2 {
+  padding: 0 25px;
+}
+
+.product-text-2 {
+  float: left;
+  width: 65%;
+}
+.product-text-2 h3 {
+  margin: 5px 0;
+  font-size: 24px;
+}
+.product-text-2 h3 a {
+  color: #666;
+  font-size: 18px;
+  text-transform: capitalize;
+  font-weight: 400;
+  text-decoration: none;
+  transition: .3s;
+}
+.product-text-2 .rating {
+  margin: 6px 0;
+}
+.rating span {
+  height: 19px!important;
+}
+.spr-badge-starrating {
+  margin: 0 3px 0 0;
+}
+.spr-icon {
+  font-size: 120%;
+  position: relative;
+  top: 1px;
+  width: 1.3em;
+  height: 1.3em;
+}
+.spr-badge-starrating .spr-icon {
+  font-size: 14px;
+  color: #ff5501;
+}
+.spr-icon.spr-icon-star-empty {
+  opacity: 1!important;
+}
+.spr-badge-starrating .spr-icon {
+  font-size: 100%;
+}
+.rating span {
+  height: 19px!important;
+}
+span.spr-badge-caption {
+  display: none!important;
+}
+.product-text-2 .price {
+  margin-bottom: 5px;
+}
+.product-text-2 .price ul li {
+  display: inline-block;
+}
+.product-text-2 .price ul li span.new-price {
+  font-weight: 600;
+  font-size: 18px;
+  color: #e23e57;
+}
+.product-text-2 .price ul li span {
+  color: #666;
+}
+.product-text-2>a {
+  color: #444;
+  text-decoration: none;
+  transition: .3s;
+}
+.product-text-2 p {
+  color: #666;
+  margin: 0 0 15px;
+}
+
+.pagenation-area {
+  border-bottom: 0;
+  padding: 0;
+}
+.page-number {
+  display: block;
+  float: none;
+  text-align: center;
+}
+.pagination {
+  border-radius: 5px;
+  display: inline-block;
+  margin: 0;
+  padding-left: 0;
+  text-align: center;
+}
+.page-number ul li {
+  display: inline-block;
+  margin: 0;
+}
+.pagination ul li a {
+  width: 30px;
+  line-height: 30px;
+  height: 30px;
+  border-radius: 4px;
+  color: #444;
+  display: inline-block;
+  font-size: 16px;
+}
+.pagination ul li.active {
+  background-color: #e23e57;
+  border-radius: 3px;
+}
+.pagination ul li.active a {
+  color: #fff;
+}
+

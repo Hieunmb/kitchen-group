@@ -31,5 +31,23 @@ img{
   float: none;
   margin: 0 auto;
 }
-
+.btn-backtotop {
+  background-color: #666;
+  bottom: 35px;
+  color: #fff;
+  display: block;
+  font-size: 25px;
+  height: 40px;
+  line-height: 40px;
+  position: fixed;
+  right: 12px;
+  text-align: center;
+  width: 40px;
+  z-index: 9999;
+  transition: .3s;
+  border: none;
+}
+.btn-backtotop:hover {
+  background: #e23e57 none repeat scroll 0 0;
+}
 
