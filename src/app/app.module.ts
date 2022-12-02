@@ -32,7 +32,7 @@ const appRoutes: Routes = [
   {path:'signin',component:SigninComponent},
   {path:'register',component:RegisterComponent},
   {path:'cart',component:CartComponent},
-  {path:'product',component:ProductComponent},
+  {path:'home/product',component:ProductComponent},
   {path:'mywishlist',component:MywishlistComponent},
   {path:'wishlist',component:WishlistComponent},
 ];
