@@ -1,5 +1,7 @@
 import {Component, Input} from "@angular/core";
 import {OwlOptions} from "ngx-owl-carousel-o";
+import {HttpClient} from "@angular/common/http";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'product',
@@ -41,9 +43,10 @@ export class ProductComponent{
     },
     nav: true
   }
-  constructor() { }
+  constructor(private http: HttpClient, private _router: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.demoproduct();
   }
   id:any = "details";
   tabChange(ids: any) {
@@ -52,5 +55,16 @@ export class ProductComponent{
   id1:any = "img1";
   tabChange1(ids1: any) {
     this.id1 = ids1;
+  }
+  product: any[] = [
+    { id: 1, title: 'trung', price: '12', thumbnail: 'adsd', description: 'haha', category_id: '12', brand_id: 'hani'},
+  ];
+  demoproduct() {
+    const id = this._router.snapshot.paramMap.get('id');
+    const url = 'http://localhost:5001/product-detail?id=';
+    this.http.get<any>(url+id)
+      .subscribe(data=>{
+        this.product = data;
+      })
   }
 }
