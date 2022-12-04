@@ -21,13 +21,14 @@ import {MywishlistComponent} from "./mywishlist/mywishlist.component";
 import {DeliveryComponent} from "./delivery/delivery.component";
 import {TermsandconditionComponent} from "./termsandcondition/termsandcondition.component";
 import {SearchComponent} from "./search/search.component";
+import {InformationshopComponentComponent} from "./informationshop/informationshop.component";
 
 const appRoutes: Routes = [
   {path:'',component:HomeComponent},
   {path:'header',component:HeaderComponent},
   {path:'nav',component:NavComponent},
   {path:'footer',component:FooterComponent},
-  // {path:'home',component:HomeComponent},
+  {path:'home',component:HomeComponent},
   {path:'aboutus',component:AboutusComponent},
   {path:'shop',component:ShopComponent},
   {path:'page',component:PageComponent},
@@ -40,13 +41,14 @@ const appRoutes: Routes = [
   {path:'delivery',component:DeliveryComponent},
   {path:'page/termsandcondition',component:TermsandconditionComponent},
   {path:'search',component:SearchComponent},
+  {path:'informationshop',component:InformationshopComponentComponent},
 ];
 
 @NgModule({
   declarations: [
     AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent,
     AboutusComponent, ShopComponent, PageComponent, ContactComponent , RegisterComponent ,SigninComponent ,
-    CartComponent,ProductComponent,MywishlistComponent, DeliveryComponent, TermsandconditionComponent, SearchComponent
+    CartComponent,ProductComponent,MywishlistComponent, DeliveryComponent, TermsandconditionComponent, SearchComponent,InformationshopComponentComponent
   ],
   imports: [
     BrowserModule,RouterModule.forRoot(appRoutes), HttpClientModule, CarouselModule
