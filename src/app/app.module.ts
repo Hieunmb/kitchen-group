@@ -22,6 +22,8 @@ import {DeliveryComponent} from "./delivery/delivery.component";
 import {TermsandconditionComponent} from "./termsandcondition/termsandcondition.component";
 import {SearchComponent} from "./search/search.component";
 import {InformationshopComponentComponent} from "./informationshop/informationshop.component";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 const appRoutes: Routes = [
   {path:'',component:HomeComponent},
@@ -51,7 +53,7 @@ const appRoutes: Routes = [
     CartComponent,ProductComponent,MywishlistComponent, DeliveryComponent, TermsandconditionComponent, SearchComponent,InformationshopComponentComponent
   ],
   imports: [
-    BrowserModule,RouterModule.forRoot(appRoutes), HttpClientModule, CarouselModule
+    BrowserModule,RouterModule.forRoot(appRoutes), HttpClientModule, CarouselModule,BrowserAnimationsModule,FormsModule,ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

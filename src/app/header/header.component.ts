@@ -8,4 +8,13 @@ import {Component} from "@angular/core";
 export class HeaderComponent{
 
 
+  onAddToCart(product:any){
+    let cartItem:any={
+      id:product.id,
+      name:product.name,
+      price:product.price,
+      quanlity:1
+    }
+    console.log(product);
+  }
 }
