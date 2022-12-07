@@ -15,13 +15,8 @@
             <li><a href="#">New products</a></li>
             <li>
               <a href="#">Brands</a>
-              <ul class="list-links">
-                <li><a href="#">Brand 01</a></li>
-                <li><a href="#">Brand 02</a></li>
-                <li><a href="#">Brand 03</a></li>
-                <li><a href="#">Brand 04</a></li>
-                <li><a href="#">Brand 05</a></li>
-                <li><a href="#">Brand 06</a></li>
+              <ul class="list-links" *ngFor="let m of product; let i = index;">
+                <li><a href="#">{{product[i].brandname}}</a></li>
               </ul>
             </li>
           </ul>
@@ -31,46 +26,26 @@
           <ul class="links">
             <li>
               <a href="#">Cookware</a>
-              <ul class="list-links">
-                <li><a href="#">Cooking pots</a></li>
-                <li><a href="#">Cooking Pans</a></li>
-                <li><a href="#">Frying Pans</a></li>
-                <li><a href="#">Cookware Sets</a></li>
-                <li><a href="#">Handis</a></li>
-                <li><a href="#">Kadais [Karahi]</a></li>
-                <li><a href="#">Grill pans</a></li>
-                <li><a href="#">Tawas</a></li>
-                <li><a href="#">Egg Poachers</a></li>
-                <li><a href="#">Steamers</a></li>
+              <ul class="list-links" *ngFor="let m of cookware; let i = index;">
+                <li><a href="#">{{cookware[i].name}}</a></li>
               </ul>
             </li>
             <li>
               <a href="#">Refrigeration</a>
-              <ul class="list-links">
-                <li><a href="#">Freezers</a></li>
-                <li><a href="#">Refrigerators</a></li>
+              <ul class="list-links" *ngFor="let m of refrigeration; let i = index;">
+                <li><a href="#">{{refrigeration[i].name}}</a></li>
               </ul>
             </li>
             <li>
               <a href="#">Appliances</a>
-              <ul class="list-links">
-                <li><a href="#">Blenders</a></li>
-                <li><a href="#">Bread Makers</a></li>
-                <li><a href="#">Coffee Makers</a></li>
-                <li><a href="#">Ice-Cream And Sorbet Makers</a></li>
-                <li><a href="#">Electric Kettles</a></li>
-                <li><a href="#">Food Choppers</a></li>
-                <li><a href="#">Toasters</a></li>
+              <ul class="list-links" *ngFor="let m of appliances; let i = index;">
+                <li><a href="#">{{appliances[i].name}}</a></li>
               </ul>
             </li>
             <li>
               <a href="#">Food Storage</a>
-              <ul class="list-links">
-                <li><a href="#">Flask</a></li>
-                <li><a href="#">Spice Jars</a></li>
-                <li><a href="#">Storage Bags</a></li>
-                <li><a href="#">Lunch Boxes</a></li>
-                <li><a href="#">Vacuum bottles</a></li>
+              <ul class="list-links" *ngFor="let m of foodstorage; let i = index;" >
+                <li><a href="#">{{foodstorage[i].name}}</a></li>
               </ul>
             </li>
             <li>
