@@ -272,7 +272,6 @@ h1 h2 h3 h4 h5 h6 {
   padding: 35px;
   position: relative;
   display: inline-block;
-  margin-left: 2px;
   transition: .3s;
   margin-bottom: 3px;
 }
@@ -296,19 +295,35 @@ h1 h2 h3 h4 h5 h6 {
   left: 12px;
   right: auto;
 }
-.single-product .product-img a img {
+.saleproduct-active .single-product .product-img a img {
   width: 100%;
+  height: 200px;
+  object-fit: contain;
 }
 .single-product .product-text h3 {
   margin: 8px 0;
   color: #333;
   font-size: 24px;
+  height: 36px;
+  overflow: hidden;
+  display: block;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
 }
 .single-product .product-text h3 a {
   color: #666;
   font-size: 14px;
   text-transform: capitalize;
   font-weight: 400;
+  height: 36px;
+  overflow: hidden;
+  display: block;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
 }
 .single-product .product-text .rating {
   height: 30px;
@@ -542,8 +557,10 @@ h1 h2 h3 h4 h5 h6 {
   width: 50%;
   padding-right: 35px;
 }
+
 .owl-item img {
   display: inline-block;
+  height: 295.5px;
   width: auto;
 }
 .tab-text h3 {
@@ -589,7 +606,7 @@ h1 h2 h3 h4 h5 h6 {
   color: #e23e57!important;
 }
 .owl-stage-outer .carousel-inner {
-  height: 332.53px;
+  height: 290.53px;
 }
 .mtb-40 {
   margin-bottom: 40px;
@@ -641,8 +658,8 @@ h1 h2 h3 h4 h5 h6 {
   float: left;
   width: 30%;
 }
-.single-product .product-img a img {
-  width: 100%;
+.single-bestseller .single-product .product-img a img {
+  max-width: 100%;
 }
 .single-bestseller .single-product .product-text {
   float: left;
@@ -655,12 +672,26 @@ h1 h2 h3 h4 h5 h6 {
   font-size: 24px;
   color: #333;
   font-weight: 500;
+  height: 40px;
+  overflow: hidden;
+  display: block;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
 }
 .single-product .product-text h3 a {
   color: #666;
   font-size: 15px;
   text-transform: capitalize;
   font-weight: 400;
+  height: 40px;
+  overflow: hidden;
+  display: block;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
 }
 .product-text .rating {
   opacity: 1;
@@ -695,6 +726,11 @@ h1 h2 h3 h4 h5 h6 {
 .single-testimonial .testimonial-img {
   position: relative;
   top: 50px;
+}
+.testimonial-img img {
+  display: inline-block;
+  width: auto;
+  height: auto;
 }
 .single-testimonial .testimonial-img:before {
   color: #8191a5;

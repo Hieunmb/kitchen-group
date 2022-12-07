@@ -57,11 +57,11 @@ export class ProductComponent{
     this.id1 = ids1;
   }
   product: any[] = [
-    { id: 1, title: 'trung', price: '12', thumbnail: 'adsd', description: 'haha', category_id: '12', brand_id: 'hani'},
+    { id: 1, title: 'trung', price: '12', thumbnail: 'adsd', description: 'haha', category_id: '12', brand_id: 'hani', thumbnail3: 'adsd', product_id: 2, thumbnail2: 'adsd'},
   ];
   demoproduct() {
     const id = this._router.snapshot.paramMap.get('id');
-    const url = 'http://localhost:5001/product-detail?id=';
+    const url = 'http://localhost:5001/product-detail1?id=';
     this.http.get<any>(url+id)
       .subscribe(data=>{
         this.product = data;

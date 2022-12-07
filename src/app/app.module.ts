@@ -21,6 +21,10 @@ import {MywishlistComponent} from "./mywishlist/mywishlist.component";
 import {DeliveryComponent} from "./delivery/delivery.component";
 import {TermsandconditionComponent} from "./termsandcondition/termsandcondition.component";
 import {SearchComponent} from "./search/search.component";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {NgOptimizedImage} from "@angular/common";
+import {NgxPaginationModule} from "ngx-pagination";
 
 const appRoutes: Routes = [
   {path:'',component:HomeComponent},
@@ -35,10 +39,10 @@ const appRoutes: Routes = [
   {path:'signin',component:SigninComponent},
   {path:'register',component:RegisterComponent},
   {path:'cart',component:CartComponent},
-  {path:'shop/product/:id',component:ProductComponent},
+  {path:'product/:id',component:ProductComponent},
   {path:'mywishlist',component:MywishlistComponent},
   {path:'delivery',component:DeliveryComponent},
-  {path:'page/termsandcondition',component:TermsandconditionComponent},
+  {path:'termsandcondition',component:TermsandconditionComponent},
   {path:'search',component:SearchComponent},
 ];
 
@@ -49,7 +53,7 @@ const appRoutes: Routes = [
     CartComponent,ProductComponent,MywishlistComponent, DeliveryComponent, TermsandconditionComponent, SearchComponent
   ],
   imports: [
-    BrowserModule,RouterModule.forRoot(appRoutes), HttpClientModule, CarouselModule
+    BrowserModule, RouterModule.forRoot(appRoutes), HttpClientModule, CarouselModule, FormsModule, ReactiveFormsModule, BrowserAnimationsModule, NgOptimizedImage, NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -29,9 +29,9 @@
         </div>
         <div class="header-min-area-row-right">
           <div class="header-search">
-            <form>
-              <input type="search" placeholder="Search our store" aria-label="Search our store">
-              <button routerLink="./search">
+            <form action="" method="get" [formGroup]="searchForm" (ngSubmit)="onsearch()">
+              <input formControlName="name" type="search" placeholder="Search our store" aria-label="Search our store" value="">
+              <button routerLink="./search" type="submit" >
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
             </form>

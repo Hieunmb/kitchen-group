@@ -77,8 +77,8 @@
                         <label>Grill pans (5)</label>
                       </li>
                       <li>
-                      <input type="checkbox">
-                      <label>Hand electric mixer (5)</label>
+                        <input type="checkbox">
+                        <label>Hand electric mixer (5)</label>
                       </li>
                       <li>
                         <input type="checkbox">
@@ -302,17 +302,17 @@
             </div>
             <div class="tab-content shop">
               <div class="products-grid mb-50">
-                <div class="single-product" *ngFor="let m of product; let i = index;">
-<!--                  <span class="hot-sale sale">Sale</span>-->
-<!--                  <span class="hot-sale percent">-20%</span>-->
+                <div class="single-product" *ngFor="let m of product | paginate: { itemsPerPage: 16, currentPage: p }; let i = index; ">
+                  <!--                  <span class="hot-sale sale">Sale</span>-->
+                  <!--                  <span class="hot-sale percent">-20%</span>-->
                   <div class="product-img">
-                    <a routerLink="./product/{{product[i].id}}">
-                      <img src="{{product[i].thumbnail}}">
+                    <a routerLink="/product/{{m.id}}">
+                      <img [src]="m.thumbnail">
                     </a>
                   </div>
                   <div class="product-text">
                     <h3 class="popup_cart_title">
-                      <a routerLink="./product/{{product[i].id}}">{{product[i].title}}</a>
+                      <a routerLink="/product/{{m.id}}">{{m.title}}</a>
                     </h3>
                     <div class="rating">
                       <span class="spr-badge">
@@ -329,7 +329,7 @@
                       <ul>
                         <li>
                           <span class="new-price">
-                            <span class="money">{{product[i].price}}.000Đ</span>
+                            <span class="money">{{m.price}}.000Đ</span>
                           </span>
                         </li>
                       </ul>
@@ -347,7 +347,7 @@
                           </a>
                         </li>
                         <li>
-                          <a routerLink="./product/{{product[i].id}}" class="action-btn quick-view">
+                          <a routerLink="/product/{{m.id}}" class="action-btn quick-view">
                             <i class="fa-regular fa-eye"></i>
                           </a>
                         </li>
@@ -359,36 +359,7 @@
             </div>
             <div class="pagenation-area">
               <div class="page-number">
-                <div class="pagination">
-                  <ul>
-                    <li class="prev">
-                      <a href="#">
-                      <span>
-                        <i class="fa-solid fa-angle-left"></i>
-                      </span>
-                      </a>
-                    </li>
-                    <li class="active">
-                      <a href="#">1</a>
-                    </li>
-                    <li>
-                      <a href="#">2</a>
-                    </li>
-                    <li>
-                      <a href="#">3</a>
-                    </li>
-                    <li>
-                      <a href="#">4</a>
-                    </li>
-                    <li class="next">
-                      <a href="#">
-                      <span>
-                        <i class="fa-solid fa-angle-right"></i>
-                      </span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+                <pagination-controls (pageChange)="p = $event" (click)="onActive()"></pagination-controls>
               </div>
             </div>
           </div>
