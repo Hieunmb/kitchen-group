@@ -1,4 +1,4 @@
-<div class="content-steps" v-if="currentStep == 1">
+<div class="content-steps">
   <div class="row flex-column-reverse flex-lg-row">
     <div class="col-lg-8 col-12">
 
@@ -13,139 +13,46 @@
         <form action="" class="form-contact">
           <div class="form-group">
             <span class="required">Họ và tên</span>
-            <input type="text" name="" id="" placeholder="Nhập họ tên của bạn">
-            <div class="error-message">Error !</div>
+            <input type="text" name="" required id="" placeholder="Nhập họ tên của bạn">
           </div>
           <div class="form-group">
-            <span>Xã/ Phường</span>
-            <label for="">
-              <select name="">
-                <option value="" v-for="n in 4">Chọn thông tin</option>
-              </select>
-              <img src="images/select-down.svg" alt="">
-            </label>
-            <div class="error-message">Error !</div>
+            <span class="required">Số điện thoại</span>
+            <input type="tel" name="" required placeholder="Nhập  số điện thoại của bạn">
           </div>
           <div class="form-group">
-            <span>Số điện thoại</span>
-            <input type="tel" name="" placeholder="Nhập  số điện thoại của bạn">
-          </div>
-          <div class="form-group">
-            <span>Quận/ Huyện</span>
-            <label for="">
-              <select name="">
-                <option value="" v-for="n in 4">Chọn thông tin</option>
-              </select>
-              <img src="images/select-down.svg" alt="">
-            </label>
-            <div class="error-message">Error !</div>
-          </div>
-          <div class="form-group">
-            <span>Email</span>
-            <input type="email" name="" placeholder="Email của bạn">
-          </div>
-          <div class="form-group">
-            <span>Tỉnh/ Thành phố</span>
-            <label for="">
-              <select name="">
-                <option value="" v-for="n in 4">Chọn thông tin</option>
-              </select>
-              <img src="images/select-down.svg" alt="">
-            </label>
+            <span class="required">Email</span>
+            <input type="email" required name="" placeholder="Email của bạn">
           </div>
           <div class="form-group form-w-full">
-            <span>Địa chỉ cụ thể</span>
-            <input type="text" name="" placeholder="VD: Số nhà, ngõ, hẻm, đường,...">
-            <div class="error-message">Error !</div>
+            <span class="required">Địa chỉ cụ thể</span>
+            <input type="text" required name="" placeholder="VD: Số nhà, ngõ, hẻm, đường,...">
           </div>
           <div class="form-group form-w-full">
             <span>Ghi chú</span>
             <textarea name="" placeholder="Nhập nội dung ghi chú"></textarea>
           </div>
-
-          <a href="#" class="btn-bill-export"
-             :class="[isSubBill == true ? 'active' : '']">
-            <span>Bạn muốn xuất hoá đơn điện tử?</span>
-          </a>
-
-          <div class="block--bill-export" :class="[isSubBill == true ? 'active' : '']" v-if="isSubBill">
-
-            <div class="form-bill-flex d-flex flex-wrap">
-              <div class="form-group">
-                <span>Tên công ty/đơn vị</span>
-                <input type="text" name="" placeholder="Tên công ty/đơn vị">
-                <div class="error-message">Error !</div>
-              </div>
-
-              <div class="form-group">
-                <span>Mã số thuế</span>
-                <input type="text" name="" placeholder="Nhập mã số thuế của công ty/ đơn vị">
-              </div>
-
-              <div class="form-group form-w-full">
-                <span>Địa chỉ</span>
-                <input type="text" name="" placeholder="Nhập địa chỉ trên Giấy phép đăng ký kinh doanh">
-              </div>
-
-              <div class="form-group form-w-full">
-                <span>Email nhận hoá đơn điện tử</span>
-                <input type="email" name="" placeholder="Nhập Email nhận hoá đơn điện tử">
-                <div class="error-message">Error !</div>
-              </div>
-            </div>
-
-            <div class="box-alert-attention">
-              <h4 class="title">
-                Lưu ý:
-              </h4>
-
-              <p>
-                Hóa đơn VAT cho các sản phẩm cung cấp từ Nam Phát sẽ được xuất sau 14 ngày để từ thời điểm
-                khách hàng mua hàng
-              </p>
-
-              <p>
-                Trường hợp khách hàng không nhập thông tin hóa đơn, Nam Phát sẽ xuất hóa đơn theo thông tin
-                mua hàng
-              </p>
-
-              <p>
-                Nam Phát từ chối xử lý các yêu cầu phát sinh trong việc kê khai thuế đối với những hóa đơn từ
-                20 triệu đồng trở lên thanh toán bằng tiền mặt
-              </p>
-            </div>
-
+          <div style="float: right;margin-right: 20px">
+            <button type="submit" class="btn btn-primary"><a class="btn btn-primary" routerLink="shop">Giao hàng ngay</a></button>
           </div>
-
         </form>
       </div>
-
-      <div class="block-button-actionstep">
-
-        <a href="#" class="btn-action btn-apply">lưu thông tin</a>
-        <a href="#" class="btn-action btn-cancel">hủy bỏ</a>
-
-      </div>
-
     </div>
-
     <div class="col-lg-4 col-12 mb-4 mb-lg-0">
       <div class="box-group">
         <div class="d-flex flex-wrap box-title">
           <h2 class="title-form">
-            đơn hàng (3)
+            Đơn hàng (1)
           </h2>
-          <a href="#" class="btn-edit ml-auto">Sửa đơn hàng</a>
         </div>
 
         <div class="product-quantity-list">
-          <div class="product-quantity-item" v-for="item in 3" :key="item">
+          <div class="product-quantity-item">
             <div class="name">
-              Chậu rửa lavabo đặt bàn TOTO LW516B
+              donec non est ullamcorper - xl / red / partex
             </div>
 
             <div class="count">
-              x2
+              <img src="http://cdn.shopify.com/s/files/1/0005/2527/1103/products/1_small.jpg?v=1521019595">
             </div>
           </div>
         </div>
@@ -156,7 +63,7 @@
                         Tạm tính:
                       </span>
             <span>
-                        19.000.000đ
+                        130.000đ
                       </span>
           </div>
 
@@ -169,21 +76,13 @@
                       </span>
           </div>
 
-          <div class="total-item">
-                      <span>
-                        VAT (nếu có)
-                      </span>
-            <span>
-                        10%
-                      </span>
-          </div>
         </div>
 
       </div>
 
       <div class="box-total-last">
         <span>TỔNG THANH TOÁN:</span>
-        <span>20.933.000đ</span>
+        <span>160.000đ</span>
       </div>
 
     </div>
