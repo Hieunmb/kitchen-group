@@ -24,6 +24,7 @@ import {SearchComponent} from "./search/search.component";
 import {InformationshopComponentComponent} from "./informationshop/informationshop.component";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {ThankComponent} from "./thank/thank.component";
 
 const appRoutes: Routes = [
   {path:'',component:HomeComponent},
@@ -44,13 +45,14 @@ const appRoutes: Routes = [
   {path:'page/termsandcondition',component:TermsandconditionComponent},
   {path:'search',component:SearchComponent},
   {path:'informationshop',component:InformationshopComponentComponent},
+  {path:'informationshop/thank',component:ThankComponent},
 ];
 
 @NgModule({
   declarations: [
     AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent,
     AboutusComponent, ShopComponent, PageComponent, ContactComponent , RegisterComponent ,SigninComponent ,
-    CartComponent,ProductComponent,MywishlistComponent, DeliveryComponent, TermsandconditionComponent, SearchComponent,InformationshopComponentComponent
+    CartComponent,ProductComponent,MywishlistComponent, DeliveryComponent, TermsandconditionComponent, SearchComponent,InformationshopComponentComponent,ThankComponent
   ],
   imports: [
     BrowserModule,RouterModule.forRoot(appRoutes), HttpClientModule, CarouselModule,BrowserAnimationsModule,FormsModule,ReactiveFormsModule
