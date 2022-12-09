@@ -307,7 +307,6 @@ select {
 .single-product .product-img a img {
   width: 145px;
   height: 168px;
-  object-fit: contain;
 }
 .single-product .product-text h3 {
   margin: 8px 0;

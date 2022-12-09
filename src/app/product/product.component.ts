@@ -60,7 +60,7 @@ export class ProductComponent{
     this.id1 = ids1;
   }
   product: any[] = [
-    { id: 1, title: 'trung', price: '12', thumbnail: 'adsd', description: 'haha', category_id: '12', brand_id: 'hani', thumbnail3: 'adsd', product_id: 2, thumbnail2: 'adsd'},
+    { id: 1, title: 'trung', price: '12', thumbnail: 'adsd', description: 'haha', category_id: '12', brand_id: 'hani'},
   ];
   productFeature: any[] = [
     { id: 1, title: 'trung', price: '12', thumbnail: 'adsd', description: 'haha', category_id: '12', brand_id: 'hani'},
@@ -68,7 +68,7 @@ export class ProductComponent{
 
   demoproduct() {
     const id = this._router.snapshot.paramMap.get('id');
-    const url = 'http://localhost:5001/product-detail1?id=';
+    const url = 'http://localhost:5001/product-detail?id=';
     this.http.get<any>(url+id)
       .subscribe(data=>{
         this.product = data;

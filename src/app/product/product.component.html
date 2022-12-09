@@ -29,10 +29,10 @@
                 <img  src="{{product[0].thumbnail}}">
               </div>
               <div *ngIf="id1 === 'img2'">
-                <img src="{{product[0].thumbnail3}}">
+                <img src="https://sunhouse.com.vn/pic/product/images/7(126).jpg">
               </div>
               <div *ngIf="id1 === 'img3'">
-                <img src="{{product[0].thumbnail2}}">
+                <img src="https://cdn.shopify.com/s/files/1/0005/2527/1103/products/2_1024x1024.jpg?v=1521019596">
               </div>
             </div>
             <div class="carousel">
@@ -44,12 +44,12 @@
                 </ng-template>
                 <ng-template carouselSlide>
                   <div class="slide">
-                    <img id="img2" (click)="tabChange1('img2')" src="{{product[0].thumbnail3}}">
+                    <img id="img2" (click)="tabChange1('img2')" src="https://sunhouse.com.vn/pic/product/images/7(126).jpg">
                   </div>
                 </ng-template>
                 <ng-template carouselSlide>
                   <div class="slide">
-                    <img id="img3" (click)="tabChange1('img3')" src="{{product[0].thumbnail2}}">
+                    <img id="img3" (click)="tabChange1('img3')" src="https://cdn.shopify.com/s/files/1/0005/2527/1103/products/2_compact.jpg?v=1521019596">
                   </div>
                 </ng-template>
               </owl-carousel-o>
@@ -79,6 +79,11 @@
                     <span class="new" style="color:#8dc458" id="ProductPrice">
                       <span class="money">{{product[0].price}}.000Đ</span>
                     </span>
+                    <del>
+                      <span id="ComparePrice" class="old">
+                        <span class="money">150.000Đ</span>
+                      </span>
+                    </del>
                   </div>
                 </div>
                 <div class="product-add-form">
@@ -100,7 +105,15 @@
                   </div>
                 </div>
                 <div class="product-addto-links-text">
-                  <p>One of the top e-commerce platforms, Angara, offers customers a complete online shopping experience...</p>
+                  <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor...</p>
+                </div>
+                <div class="product-meta">
+                  <span class="posted-in">
+                    <span>Tag:</span>
+                    <a href="#">black</a>,
+                    <a href="#">brown</a>,
+                    <a href="#">cyan</a>
+                  </span>
                 </div>
                 <div class="single-product-sharing">
                   <span>Share:</span>
@@ -163,48 +176,48 @@
                     <div class="spr-header">
                       <h2 class="spr-header-title">Customer Reviews</h2>
                       <div class="spr-summary rte">
-<!--                        <span class="spr-starrating spr-summary-starrating">-->
-<!--                          <i class="spr-icon spr-icon-star-empty fa-solid fa-star"></i>-->
-<!--                          <i class="spr-icon spr-icon-star-empty fa-solid fa-star"></i>-->
-<!--                          <i class="spr-icon spr-icon-star-empty fa-solid fa-star"></i>-->
-<!--                          <i class="spr-icon spr-icon-star-empty fa-solid fa-star"></i>-->
-<!--                          <i class="spr-icon spr-icon-star-empty fa-solid fa-star"></i>-->
-<!--                        </span>-->
+                        <span class="spr-starrating spr-summary-starrating">
+                          <i class="spr-icon spr-icon-star-empty fa-solid fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-solid fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-solid fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-solid fa-star"></i>
+                          <i class="spr-icon spr-icon-star-empty fa-solid fa-star"></i>
+                        </span>
                         <span class="spr-summary-caption">
-                          <span class="spr-summary-actions-togglereviews">No reviews yet</span>
+                          <span class="spr-summary-actions-togglereviews">Based on 1 review</span>
                         </span>
                         <span class="spr-summary-actions">
                           <a href="#" class="spr-summary-actions-newreview">Write a review</a>
                         </span>
                       </div>
                     </div>
-<!--                    <div class="spr-content">-->
-<!--                      <div class="spr-reviews">-->
-<!--                        <div class="spr-review">-->
-<!--                          <div class="spr-review-header">-->
-<!--                            <span class="spr-starratings spr-review-header-starratings" aria-label="5 of 5 stars" role="img">-->
-<!--                              <i class="spr-icon spr-icon-star-empty fa-solid fa-star"></i>-->
-<!--                              <i class="spr-icon spr-icon-star-empty fa-solid fa-star"></i>-->
-<!--                              <i class="spr-icon spr-icon-star-empty fa-solid fa-star"></i>-->
-<!--                              <i class="spr-icon spr-icon-star-empty fa-solid fa-star"></i>-->
-<!--                              <i class="spr-icon spr-icon-star-empty fa-solid fa-star"></i>-->
-<!--                            </span>-->
-<!--                            <h3 class="spr-review-header-title">Trung</h3>-->
-<!--                            <span class="spr-review-header-byline">-->
-<!--                              <strong>monday</strong>-->
-<!--                              on-->
-<!--                              <strong>Jan 29, 2021</strong>-->
-<!--                            </span>-->
-<!--                          </div>-->
-<!--                          <div class="spr-review-content">-->
-<!--                            <p class="spr-review-content-body">Cho shop 10 điểm</p>-->
-<!--                          </div>-->
-<!--                          <div class="spr-review-footer rte">-->
-<!--                            <a href="#" class="spr-review-reportreview">Report as Inappropriate</a>-->
-<!--                          </div>-->
-<!--                        </div>-->
-<!--                      </div>-->
-<!--                    </div>-->
+                    <div class="spr-content">
+                      <div class="spr-reviews">
+                        <div class="spr-review">
+                          <div class="spr-review-header">
+                            <span class="spr-starratings spr-review-header-starratings" aria-label="5 of 5 stars" role="img">
+                              <i class="spr-icon spr-icon-star-empty fa-solid fa-star"></i>
+                              <i class="spr-icon spr-icon-star-empty fa-solid fa-star"></i>
+                              <i class="spr-icon spr-icon-star-empty fa-solid fa-star"></i>
+                              <i class="spr-icon spr-icon-star-empty fa-solid fa-star"></i>
+                              <i class="spr-icon spr-icon-star-empty fa-solid fa-star"></i>
+                            </span>
+                            <h3 class="spr-review-header-title">Trung</h3>
+                            <span class="spr-review-header-byline">
+                              <strong>monday</strong>
+                              on
+                              <strong>Jan 29, 2021</strong>
+                            </span>
+                          </div>
+                          <div class="spr-review-content">
+                            <p class="spr-review-content-body">Cho shop 10 điểm</p>
+                          </div>
+                          <div class="spr-review-footer rte">
+                            <a href="#" class="spr-review-reportreview">Report as Inappropriate</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

@@ -84,7 +84,7 @@ h1 h2 h3 h4 h5 h6 {
 
 /* brand-area */
 .brand-area {
-  padding-top: 40px;
+  padding-top: 0;
   padding-bottom: 40px;
 }
 /* newsletter-area */
@@ -338,12 +338,4 @@ h1 h2 h3 h4 h5 h6 {
 #section-footer .copy-right-area p a {
   color: #666666;
   font-size: 14px;
-}
-.help-block {
-  padding: 10px;
-  position: relative;
-  border-radius: 5px;
-  top: 4px;
-  left: 24px;
-  color: #fff;
 }
