@@ -1,5 +1,6 @@
 import {Component} from "@angular/core";
 import {OwlOptions} from "ngx-owl-carousel-o";
+import {FormControl, FormGroup, Validator, Validators} from "@angular/forms";
 
 @Component({
   selector: 'footer',
@@ -30,5 +31,18 @@ export class FooterComponent{
       }
     },
     nav: true
+  }
+  formSub: FormGroup = new FormGroup({
+    email: new FormControl('', [ Validators.required, Validators.email, Validators.minLength(12),])
+  })
+  constructor() { }
+  get f() {
+    return this.formSub.controls;
+  }
+  ngOnInit(): void {
+
+  }
+  onSub() {
+    this.formSub.reset();
   }
 }

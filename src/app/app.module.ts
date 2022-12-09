@@ -25,6 +25,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {NgOptimizedImage} from "@angular/common";
 import {NgxPaginationModule} from "ngx-pagination";
+import {InformationshopComponentComponent} from "./informationshop/informationshop.component";
+import {ThankComponent} from "./thank/thank.component";
 
 const appRoutes: Routes = [
   {path:'',component:HomeComponent},
@@ -43,17 +45,20 @@ const appRoutes: Routes = [
   {path:'delivery',component:DeliveryComponent},
   {path:'termsandcondition',component:TermsandconditionComponent},
   {path:'search',component:SearchComponent},
-
+  {path:'informationshop',component:InformationshopComponentComponent},
+  {path:'thank',component:ThankComponent},
 ];
 
 @NgModule({
   declarations: [
     AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent,
     AboutusComponent, ShopComponent, PageComponent, ContactComponent , RegisterComponent ,SigninComponent ,
-    CartComponent,ProductComponent,MywishlistComponent, DeliveryComponent, TermsandconditionComponent, SearchComponent
+    CartComponent,ProductComponent,MywishlistComponent, DeliveryComponent, TermsandconditionComponent, SearchComponent,
+    InformationshopComponentComponent, ThankComponent
   ],
   imports: [
-    BrowserModule, RouterModule.forRoot(appRoutes), HttpClientModule, CarouselModule, FormsModule, ReactiveFormsModule, BrowserAnimationsModule, NgOptimizedImage, NgxPaginationModule
+    BrowserModule, RouterModule.forRoot(appRoutes), HttpClientModule, CarouselModule, FormsModule, ReactiveFormsModule,
+    BrowserAnimationsModule, NgOptimizedImage, NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

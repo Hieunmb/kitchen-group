@@ -53,14 +53,16 @@
           </div>
           <div class="col-lg-6">
             <div class="newsletter-form ">
-              <form method="post" action="#"  accept-charset="UTF-8" class="contact-form">
-                <input type="hidden" name="form_type" value="customer">
-                <input type="hidden" name="utf8" value="✓">
+              <form method="POST" action="" [formGroup]="formSub" (submit)="onSub()" class="contact-form">
                 <div id="mc_embed_signup_scroll" class="mc-form subscribe-form validate">
                   <div id="mc-form" class="mc-form subscribe-form">
-                    <input class="email" type="hidden" name="contact[tags]" value="newsletter" required>
-                    <input class="email" type="email" required name="contact[email]" id="Email" value="" placeholder="email@example.com" aria-label="email@example.com">
-                    <button type="submit" class="button" name="commit" id="Subscribe">Subscribe</button>
+                    <input class="email" type="email" name="contact[email]" id="Email" placeholder="email@example.com" formControlName="email" required>
+                    <button type="submit" class="button" id="Subscribe" [disabled]="f['email'].errors">Subscribe</button>
+                    <div *ngIf="f['email'].touched && f['email'].errors">
+                      <small class="help-block" *ngIf="f['email'].errors['required']">Email không được để trống</small>
+                      <small class="help-block" *ngIf="f['email'].errors['email']">Email không đúng định dạng</small>
+                      <small class="help-block" *ngIf="f['email'].errors['minlength']">Email tối thiểu 12 kí tự</small>
+                    </div>
                   </div>
                 </div>
               </form>
@@ -147,37 +149,29 @@
           <div class="col-lg-3">
             <div class="single-footer" style="height: 256px;">
               <div class="footer-title">
-                <h3>CUSTOMER SERVICE</h3>
+                <h3>INFORMATION</h3>
               </div>
               <div class="footer-menu">
                 <ul>
                   <li>
                     <i class="fa-solid fa-angle-right"></i>
-                    <a href="#">Shipping Policy</a>
+                    <a href="#">Home</a>
                   </li>
                   <li>
                     <i class="fa-solid fa-angle-right"></i>
-                    <a href="#">Order History</a>
+                    <a href="#">About Us</a>
                   </li>
                   <li>
                     <i class="fa-solid fa-angle-right"></i>
-                    <a href="#">Returns</a>
+                    <a href="#">Shop</a>
                   </li>
                   <li>
                     <i class="fa-solid fa-angle-right"></i>
-                    <a href="#">Specials</a>
+                    <a href="#">Page</a>
                   </li>
                   <li>
                     <i class="fa-solid fa-angle-right"></i>
-                    <a href="#">Unsubscribe Notification</a>
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-angle-right"></i>
-                    <a href="#">Return Policy</a>
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-angle-right"></i>
-                    <a href="#">Gift Vouchers</a>
+                    <a href="#">Contact</a>
                   </li>
                 </ul>
               </div>
@@ -186,37 +180,29 @@
           <div class="col-lg-3">
             <div class="single-footer" style="height: 256px;">
               <div class="footer-title">
-                <h3>INFORMATION</h3>
+                <h3>CATEROGY</h3>
               </div>
               <div class="footer-menu">
                 <ul>
                   <li>
                     <i class="fa-solid fa-angle-right"></i>
-                    <a href="#">Shipping Policy</a>
+                    <a href="#">Cookware</a>
                   </li>
                   <li>
                     <i class="fa-solid fa-angle-right"></i>
-                    <a href="#">Order History</a>
+                    <a href="#">Refrigeration</a>
                   </li>
                   <li>
                     <i class="fa-solid fa-angle-right"></i>
-                    <a href="#">Returns</a>
+                    <a href="#">Appliances</a>
                   </li>
                   <li>
                     <i class="fa-solid fa-angle-right"></i>
-                    <a href="#">Specials</a>
+                    <a href="#">Food Storage</a>
                   </li>
                   <li>
                     <i class="fa-solid fa-angle-right"></i>
-                    <a href="#">Unsubscribe Notification</a>
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-angle-right"></i>
-                    <a href="#">Return Policy</a>
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-angle-right"></i>
-                    <a href="#">Gift Vouchers</a>
+                    <a href="#">Knives And Tools</a>
                   </li>
                 </ul>
               </div>
@@ -225,37 +211,29 @@
           <div class="col-lg-2">
             <div class="single-footer" style="height: 256px;">
               <div class="footer-title">
-                <h3>EXTRAS</h3>
+                <h3>PAGE</h3>
               </div>
               <div class="footer-menu">
                 <ul>
                   <li>
                     <i class="fa-solid fa-angle-right"></i>
-                    <a href="#">Shipping Policy</a>
+                    <a href="#">Delivery</a>
                   </li>
                   <li>
                     <i class="fa-solid fa-angle-right"></i>
-                    <a href="#">Order History</a>
+                    <a href="#">Terms-Conditions</a>
                   </li>
                   <li>
                     <i class="fa-solid fa-angle-right"></i>
-                    <a href="#">Returns</a>
+                    <a href="#">About Us</a>
                   </li>
                   <li>
                     <i class="fa-solid fa-angle-right"></i>
-                    <a href="#">Specials</a>
+                    <a href="#">Our Stores</a>
                   </li>
                   <li>
                     <i class="fa-solid fa-angle-right"></i>
-                    <a href="#">Unsubscribe Notification</a>
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-angle-right"></i>
-                    <a href="#">Return Policy</a>
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-angle-right"></i>
-                    <a href="#">Gift Vouchers</a>
+                    <a href="#">Contact</a>
                   </li>
                 </ul>
               </div>

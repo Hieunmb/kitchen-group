@@ -68,14 +68,13 @@ export class ProductComponent{
 
   demoproduct() {
     const id = this._router.snapshot.paramMap.get('id');
-    const url = 'http://localhost:5001/product-detail?id=';
+    const url = 'http://localhost:5001/product-detail1?id=';
     this.http.get<any>(url+id)
       .subscribe(data=>{
         this.product = data;
       })
   }
   listProductFeature() {
-
     const url = 'http://localhost:5001/product-feature'
     this.http.get<any>(url)
       .subscribe(data=>{

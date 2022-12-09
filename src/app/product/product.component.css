@@ -422,7 +422,7 @@ input.cart-plus-minus-box {
   margin-top: 24px;
 }
 .spr-review, .spr-form {
-   border-color: #ECECEC;
+  border-color: #ECECEC;
 }
 .spr-review {
   padding: 24px 0;
@@ -496,13 +496,13 @@ input.cart-plus-minus-box {
   float: left;
 }
 .single-product {
-   padding: 35px;
-   position: relative;
-   display: inline-block;
-   margin-left: 2px;
-   transition: .3s;
-   margin-bottom: 3px;
- }
+  padding: 35px;
+  position: relative;
+  display: inline-block;
+  margin-left: 2px;
+  transition: .3s;
+  margin-bottom: 3px;
+}
 .single-product:hover {
   box-shadow: 0 0 8px #0101014d;
 }
