@@ -53,88 +53,28 @@
                   <div class="single-left-area">
                     <ul>
                       <li>
-                        <input type="checkbox">
-                        <label>Cooking pots (5)</label>
+                        <input type="radio" name="input" (change)="demoproduct()">
+                        <label>All CATEGORY</label>
                       </li>
                       <li>
-                        <input type="checkbox">
-                        <label>Cooking Pans (5)</label>
+                        <input type="radio" name="input" (change)="productCookwear($event)">
+                        <label>COOKWEAR</label>
                       </li>
                       <li>
-                        <input type="checkbox">
-                        <label>Frying Pans (5)</label>
+                        <input type="radio" name="input" (change)="productRefrigeration($event)">
+                        <label>REFRIGERATION</label>
                       </li>
                       <li>
-                        <input type="checkbox">
-                        <label>Handis (5)</label>
+                        <input type="radio" name="input" (change)="productAppliances($event)">
+                        <label>APPLIANCES</label>
                       </li>
                       <li>
-                        <input type="checkbox">
-                        <label>Kadais [Karahi] (5)</label>
+                        <input type="radio" name="input" (change)="productFoodstorage($event)">
+                        <label>FOOD STORAGE</label>
                       </li>
                       <li>
-                        <input type="checkbox">
-                        <label>Grill pans (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Hand electric mixer (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Egg Poachers (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Steamers (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Grill pans (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Grill pans (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Grill pans (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Grill pans (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Grill pans (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Grill pans (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Grill pans (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Grill pans (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Grill pans (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Grill pans (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Grill pans (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Grill pans (5)</label>
+                        <input type="radio" name="input" (change)="productKnivesandtools($event)">
+                        <label>KNIVES AND TOOLS</label>
                       </li>
                     </ul>
                   </div>
@@ -145,117 +85,9 @@
                   </div>
                   <div class="single-left-area">
                     <ul>
-                      <li>
+                      <li *ngFor="let br of brand">
                         <input type="checkbox">
-                        <label>Lock&Lock (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Panasonic (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Tosiba (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>LG (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Alaska (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Thịnh Phát (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Thịnh Phát (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Thịnh Phát (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Thịnh Phát (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Thịnh Phát (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Thịnh Phát (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Thịnh Phát (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Thịnh Phát (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Thịnh Phát (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Thịnh Phát (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Thịnh Phát (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Thịnh Phát (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Thịnh Phát (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Thịnh Phát (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Thịnh Phát (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Thịnh Phát (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Thịnh Phát (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Thịnh Phát (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Thịnh Phát (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Thịnh Phát (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Thịnh Phát (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Thịnh Phát (5)</label>
-                      </li>
-                      <li>
-                        <input type="checkbox">
-                        <label>Thịnh Phát (5)</label>
+                        <label>{{br.brandname}}</label>
                       </li>
                     </ul>
                   </div>
@@ -277,26 +109,22 @@
                         <i class="fa-solid fa-table-cells"></i>
                       </a>
                     </li>
-                    <li title="List view" class="change-view" data-view="list">
-                      <a href="#">
-                        <i class="fa fa-list"></i>
-                      </a>
-                    </li>
+<!--                    <li title="List view" class="change-view" data-view="list">-->
+<!--                      <a href="#">-->
+<!--                        <i class="fa fa-list"></i>-->
+<!--                      </a>-->
+<!--                    </li>-->
                   </ul>
                 </div>
                 <!-- tab-menu-end -->
               </div>
               <div class="toolbar-sorter">
                 <label for="SortBy">Sort by</label>
-                <select name="SortBy" id="SortBy">
-                  <option value="manual">Featured</option>
-                  <option value="best-selling">Best Selling</option>
-                  <option value="title-ascending">Alphabetically, A-Z</option>
-                  <option value="title-descending">Alphabetically, Z-A</option>
-                  <option value="price-ascending">Price, low to high</option>
-                  <option value="price-descending">Price, high to low</option>
-                  <option value="created-descending">Date, new to old</option>
-                  <option value="created-ascending">Date, old to new</option>
+                <select name="SortBy" (change)="productlist($event)" id="SortBy">
+                  <option value="1" >Alphabetically, A-Z</option>
+                  <option value="2">Alphabetically, Z-A</option>
+                  <option value="3">Price, low to high</option>
+                  <option value="4">Price, high to low</option>
                 </select>
               </div>
             </div>

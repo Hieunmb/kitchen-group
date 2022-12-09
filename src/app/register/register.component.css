@@ -11,3 +11,21 @@
   transition: .3s;
   border-radius: 5px;
 }
+.help-block-first {
+  color: red;
+  position: relative;
+  top: 0;
+  left: 20px;
+}
+.help-block {
+  color: red;
+  position: relative;
+  top: -10px;
+  left: 20px;
+}
+.help-block-last {
+  color: red;
+  position: relative;
+  top: -25px;
+  left: 490px;
+}

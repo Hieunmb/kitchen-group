@@ -2,6 +2,8 @@ import {Component, Input} from "@angular/core";
 import {OwlOptions} from "ngx-owl-carousel-o";
 import {HttpClient} from "@angular/common/http";
 import {ActivatedRoute} from "@angular/router";
+import {switchMap} from "rxjs";
+
 
 @Component({
   selector: 'product',
@@ -47,6 +49,7 @@ export class ProductComponent{
 
   ngOnInit(): void {
     this.demoproduct();
+    this.listProductFeature();
   }
   id:any = "details";
   tabChange(ids: any) {
@@ -59,6 +62,10 @@ export class ProductComponent{
   product: any[] = [
     { id: 1, title: 'trung', price: '12', thumbnail: 'adsd', description: 'haha', category_id: '12', brand_id: 'hani', thumbnail3: 'adsd', product_id: 2, thumbnail2: 'adsd'},
   ];
+  productFeature: any[] = [
+    { id: 1, title: 'trung', price: '12', thumbnail: 'adsd', description: 'haha', category_id: '12', brand_id: 'hani'},
+  ];
+
   demoproduct() {
     const id = this._router.snapshot.paramMap.get('id');
     const url = 'http://localhost:5001/product-detail1?id=';
@@ -66,5 +73,16 @@ export class ProductComponent{
       .subscribe(data=>{
         this.product = data;
       })
+  }
+  listProductFeature() {
+
+    const url = 'http://localhost:5001/product-feature'
+    this.http.get<any>(url)
+      .subscribe(data=>{
+        this.productFeature = data;
+      })
+  }
+  onActive() {
+    window.scroll(0, 0);
   }
 }

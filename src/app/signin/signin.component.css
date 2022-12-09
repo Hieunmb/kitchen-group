@@ -18,3 +18,8 @@ a{
 #login1{
   color: white;
 }
+.help-block {
+  color: red;
+  position: relative;
+  left: 15px;
+}

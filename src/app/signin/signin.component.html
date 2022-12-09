@@ -12,23 +12,31 @@
                 <h4 class="mt-1 mb-5 pb-1"></h4>
               </div>
 
-              <form>
+              <form action="" [formGroup]="formSub" (submit)="onSub()">
                 <p>Please login to your account</p>
 
                 <div class="form-outline mb-4">
-                  <input type="email" id="form2Example11" class="form-control"
+                  <input type="email" id="form2Example11" formControlName="email" class="form-control"
                          placeholder="Phone number or email address"/>
+                  <div *ngIf="f['email'].touched && f['email'].errors">
+                    <small class="help-block" *ngIf="f['email'].errors['required']">Email không được để trống !</small>
+                    <small class="help-block" *ngIf="f['email'].errors['email']">Email không đúng định dạng !</small>
+                    <small class="help-block" *ngIf="f['email'].errors['minlength']">Email tối thiểu 12 kí tự !</small>
+                  </div>
                   <label class="form-label" for="form2Example11">Username</label>
                 </div>
 
                 <div class="form-outline mb-4">
-                  <input type="password" id="form2Example22" class="form-control"/>
+                  <input type="password" id="form2Example22" formControlName="password" class="form-control" placeholder="********"/>
+                  <div *ngIf="f['password'].touched && f['password'].errors">
+                    <small class="help-block" *ngIf="f['password'].errors['required']">Password không được để trống !</small>
+                  </div>
                   <label class="form-label" for="form2Example22">Password</label>
                 </div>
 
                 <div class="text-center pt-1 mb-5 pb-1">
-                  <button class="login" type="button">
-                    <a routerLink="./#" id="login1">Log in</a>
+                  <button class="login" type="submit" [disabled]="f['email'].errors || f['password'].errors">Log in
+<!--                    <a routerLink="./#" id="login1">Log in</a>-->
                   </button>
                   <a class="text-muted" href="#">Forgot password?</a>
                 </div>

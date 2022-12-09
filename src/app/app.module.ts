@@ -31,7 +31,6 @@ const appRoutes: Routes = [
   {path:'header',component:HeaderComponent},
   {path:'nav',component:NavComponent},
   {path:'footer',component:FooterComponent},
-  // {path:'home',component:HomeComponent},
   {path:'aboutus',component:AboutusComponent},
   {path:'shop',component:ShopComponent},
   {path:'page',component:PageComponent},
@@ -44,6 +43,7 @@ const appRoutes: Routes = [
   {path:'delivery',component:DeliveryComponent},
   {path:'termsandcondition',component:TermsandconditionComponent},
   {path:'search',component:SearchComponent},
+
 ];
 
 @NgModule({

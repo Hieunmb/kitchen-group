@@ -37,21 +37,35 @@
         <div class="col-md-6">
           <div class="leave-a-message">
             <h3 class="abc-2">leave a message</h3>
-            <form method="get" action="#" class="contact-form">
+            <form method="get" action="#" [formGroup]="formSub" (submit)="onSub()" class="contact-form">
               <div class="row">
                 <div class="col-lg-6">
-                  <input type="text" required name="fullname" id="style-form-single-1" value placeholder="Your Name">
+                  <input type="text" required name="fullname" id="style-form-single-1" formControlName="name" placeholder="Your Name">
+                  <div *ngIf="f['name'].touched && f['name'].errors">
+                    <small class="help-block" *ngIf="f['name'].errors['required']">Your Name không được để trống !</small>
+                  </div>
                 </div>
                 <div class="col-lg-6">
-                  <input type="email" required name="youremail" id="style-form-single-2" value placeholder="Your Email">
+                  <input type="email" required name="youremail" id="style-form-single-2" formControlName="email" placeholder="Your Email">
+                  <div *ngIf="f['email'].touched && f['email'].errors">
+                    <small class="help-block" *ngIf="f['email'].errors['required']">Your Email không được để trống !</small>
+                    <small class="help-block" *ngIf="f['email'].errors['email']">Email không đúng định dạng</small>
+                    <small class="help-block" *ngIf="f['email'].errors['minlength']">Email tối thiểu 12 kí tự</small>
+                  </div>
                 </div>
               </div>
               <div class="subject">
-                <input type="subject" required name="yoursubject" id="style-form-single-3" value placeholder="Subject">
+                <input type="subject" required name="yoursubject" formControlName="subject" id="style-form-single-3" placeholder="Subject">
+                <div *ngIf="f['subject'].touched && f['subject'].errors">
+                  <small class="help-block" *ngIf="f['subject'].errors['required']">Subject không được để trống !</small>
+                </div>
               </div>
               <div class="your-massage">
-                <textarea required name="yourmassage" id="style-form-single-4" value placeholder="Your Massage"></textarea>
-                <input type="submit" id="style-form-single-5" class="style-form-single-5" value="Submit">
+                <textarea required name="yourmassage" id="style-form-single-4" formControlName="message" placeholder="Your Massage"></textarea>
+                <div *ngIf="f['message'].touched && f['message'].errors">
+                  <small class="help-block" *ngIf="f['message'].errors['required']">Your Message không được để trống !</small>
+                </div>
+                <input type="submit" id="style-form-single-5" [disabled]="f['email'].errors || f['name'].errors || f['subject'].errors || f['message'].errors" class="style-form-single-5" value="Submit">
               </div>
             </form>
           </div>

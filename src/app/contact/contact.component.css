@@ -140,3 +140,9 @@ ul {
   background: #e23e57!important;
   color: #ffffff;
 }
+.help-block {
+  position: relative;
+  top: -8px;
+  left: 16px;
+  color: red;
+}
