@@ -2,8 +2,8 @@ import {Component, Input} from "@angular/core";
 import {OwlOptions} from "ngx-owl-carousel-o";
 import {HttpClient} from "@angular/common/http";
 import {ActivatedRoute} from "@angular/router";
-import {switchMap} from "rxjs";
-
+import {CartService} from "../service/cart.service";
+import {ApiService} from "../service/api.service";
 
 @Component({
   selector: 'product',
@@ -15,10 +15,12 @@ export class ProductComponent{
   sosp = 1;
   tangsosp() {
     this.sosp++;
+    this.demoproduct()
   }
   giamsosp() {
     if(this.sosp > 0) {
       this.sosp--;
+      this.demoproduct()
     }
   }
   customOptions: OwlOptions = {
@@ -45,11 +47,18 @@ export class ProductComponent{
     },
     nav: true
   }
-  constructor(private http: HttpClient, private _router: ActivatedRoute) { }
-
+  constructor(private http: HttpClient, private _router: ActivatedRoute, private cartService: CartService, private api: ApiService) { }
+  ids: any;
   ngOnInit(): void {
-    this.demoproduct();
+    this.ids = this._router.snapshot.paramMap.get('id');
+    this._router.params.subscribe(params => {
+      this.ids = params['id'];
+      this.demoproduct();
+    });
     this.listProductFeature();
+  }
+  addtocart(item: any) {
+    this.cartService.addtoCart(item);
   }
   id:any = "details";
   tabChange(ids: any) {
@@ -67,12 +76,16 @@ export class ProductComponent{
   ];
 
   demoproduct() {
-    const id = this._router.snapshot.paramMap.get('id');
-    const url = 'http://localhost:5001/product-detail1?id=';
-    this.http.get<any>(url+id)
+    const url = 'http://localhost:5001/product-detail1?id='+ this.ids;
+    this.http.get<any>(url)
       .subscribe(data=>{
         this.product = data;
+        this.product.forEach((a: any) => {
+          Object.assign(a, {quantity:this.sosp, total: a.price});
+        })
+
       })
+
   }
   listProductFeature() {
     const url = 'http://localhost:5001/product-feature'

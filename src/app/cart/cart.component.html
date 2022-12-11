@@ -1,48 +1,62 @@
 <div class="breadcrumbs">
   <div class="container">
     <div class="row-cols-2" style="padding-top: 15px">
-      <a href="" class="link-title">Home<i class="fa-solid fa-angle-right"></i></a><span style="color: #9d9b9b">Your Shopping Cart</span>
+      <a routerLink="/" class="link-title">Home<i class="fa-solid fa-angle-right"></i></a><span style="color: #9d9b9b">Your Shopping Cart</span>
     </div>
   </div>
 </div>
-<div class="container">
-<div class="col-lg-12">
-  <div class="cart-table table-content table-responsive">
-    <table>
-      <thead>
-      <tr>
-        <th class="product-thumbnail">Image Title</th>
-        <th class="product-name">Product Title</th>
-        <th class="product-price">Price Title</th>
-        <th class="product-quantity">Quentity Title</th>
-        <th class="product-subtotal">Total Title</th>
-        <th class="product-remove">Remove Title</th>
-      </tr>
-      </thead>
-      <tbody>
 
-
-      <tr>
-        <td class="product-thumbnail"><a href="/products/donec-non-est-ullamcorper?variant=6998305210431"><img src="//cdn.shopify.com/s/files/1/0005/2527/1103/products/1_small.jpg?v=1521019595" alt="man"></a></td>
-        <td class="product-name"><a href="/products/donec-non-est-ullamcorper?variant=6998305210431">donec non est ullamcorper - xl / red / partex</a></td>
-        <td class="product-price"><span class="amount"><span class="money" data-currency-usd="$100.00">$130.00</span></span></td>
-        <td class="product-quantity"><input type="number" value="1" name="updates[]"></td>
-        <td class="product-subtotal"><span class="money" data-currency-usd="$200.00">$130.00</span></td>
-        <td class="product-remove"><a href="/cart/change?line=1&amp;quantity=0"><i class="fa fa-times"></i></a></td>
-      </tr>
-
-
-      </tbody>
-    </table>
+<ng-container *ngIf="products.length != 0">
+  <div class="container">
+    <div class="col-lg-12">
+      <div class="cart-table table-content table-responsive">
+        <table>
+          <thead>
+          <tr>
+            <th class="product-thumbnail">Image Title</th>
+            <th class="product-name">Product Title</th>
+            <th class="product-price">Price Title</th>
+            <th class="product-quantity">Quentity Title</th>
+            <th class="product-subtotal">Total Title</th>
+            <th class="product-remove">Remove Title</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let item of products, let i = index">
+            <td class="product-thumbnail"><a routerLink="/product/{{item.id}}"><img [src]="item.thumbnail"></a></td>
+            <td class="product-name"><a routerLink="/product/{{item.id}}">{{item.title}}</a></td>
+            <td class="product-price"><span class="amount"><span class="money">{{item.price}}.000Đ</span></span></td>
+            <td class="product-quantity">
+              {{item.quantity}}
+            </td>
+            <td class="product-subtotal"><span class="money">{{item.total}}.000Đ</span></td>
+            <td class="product-remove"><a (click)="removeItem(item)"><i class="fa fa-times"></i></a></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
-</div>
+</ng-container>
+<ng-container *ngIf="products.length == 0">
+  <div class="container">
+    <div class="card">
+
+    </div>
+    <div class="center">
+      <img src="https://rukminim1.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90">
+      <h4>Your cart is empty!</h4>
+      <h6>Add item to it now</h6>
+    </div>
+  </div>
+</ng-container>
 <div class="container">
 <div class="row">
   <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
     <div class="buttons-cart mb-30">
       <ul>
-        <li><button class="button" name="update">Update Cart</button></li>
-        <li><a href="home">Continue Shopping</a></li>
+        <li><button class="button" (click)="emptycart()">Empty Cart</button></li>
+        <li><a routerLink="/shop">Continue Shopping</a></li>
       </ul>
     </div>
     <div class="coupon">
@@ -56,27 +70,21 @@
       <h2>Process Checkout</h2>
       <table>
         <tbody>
-        <tr class="cart-subtotal">
-          <th>Subtotal Title</th>
-          <td>
-            <span class="amount"><span class="money" data-currency-usd="$130.00">$130.00</span></span>
-          </td>
-        </tr>
         <tr class="order-total">
           <th>Grand Total</th>
           <td>
             <strong>
-              <span class="amount"><span class="money" data-currency-usd="$130.00">$130.00</span></span>
+              <span class="amount"><span class="money">${{grandTotal}}.000Đ</span></span>
             </strong>
           </td>
         </tr>
         </tbody>
       </table>
       <div class="wc-proceed-to-checkout">
-        <a href="/informationshop" class="button">process to checkout</a>
+        <a routerLink="/informationshop" class="button">process to checkout</a>
       </div>
     </div>
   </div>
 </div>
 </div>
-</div>
+

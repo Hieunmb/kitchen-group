@@ -1,90 +1,106 @@
 <div class="content-steps">
-  <div class="row flex-column-reverse flex-lg-row">
-    <div class="col-lg-8 col-12">
-
-      <div class="box-group">
-
-        <div class="box-title">
-          <h2 class="title-form">
-            thông tin khách hàng
-          </h2>
-        </div>
-
-        <form action="" class="form-contact">
-          <div class="form-group">
-            <span class="required">Họ và tên</span>
-            <input type="text" name="" required id="" placeholder="Nhập họ tên của bạn">
+  <div class="container">
+    <div class="row flex-column-reverse flex-lg-row">
+      <div class="col-lg-8 col-12">
+        <div class="box-group">
+          <div class="box-title">
+            <h2 class="title-form">
+              customer information
+            </h2>
           </div>
-          <div class="form-group">
-            <span class="required">Số điện thoại</span>
-            <input type="tel" name="" required placeholder="Nhập  số điện thoại của bạn">
-          </div>
-          <div class="form-group">
-            <span class="required">Email</span>
-            <input type="email" required name="" placeholder="Email của bạn">
-          </div>
-          <div class="form-group form-w-full">
-            <span class="required">Địa chỉ cụ thể</span>
-            <input type="text" required name="" placeholder="VD: Số nhà, ngõ, hẻm, đường,...">
-          </div>
-          <div class="form-group form-w-full">
-            <span>Ghi chú</span>
-            <textarea name="" placeholder="Nhập nội dung ghi chú"></textarea>
-          </div>
-          <div style="float: right;margin-right: 20px">
-            <button type="submit" class="btn btn-primary"><a class="btn btn-primary" (click)="thank()"  routerLink="/">Giao hàng ngay</a></button>
-          </div>
-        </form>
-      </div>
-    </div>
-    <div class="col-lg-4 col-12 mb-4 mb-lg-0">
-      <div class="box-group">
-        <div class="d-flex flex-wrap box-title">
-          <h2 class="title-form">
-            Đơn hàng (1)
-          </h2>
-        </div>
-
-        <div class="product-quantity-list">
-          <div class="product-quantity-item">
-            <div class="name">
-              donec non est ullamcorper - xl / red / partex
+          <form action="" class="form-contact" [formGroup]="formSub" (submit)="onSub()">
+            <div class="form-group">
+              <span class="required">First Name</span>
+              <input type="text" formControlName="firstName" placeholder="First Name">
+              <div *ngIf="f['firstName'].touched && f['firstName'].errors">
+                <small class="help-block" *ngIf="f['firstName'].errors['required']">FirstName không được để trống !</small>
+              </div>
             </div>
 
-            <div class="count">
-              <img src="http://cdn.shopify.com/s/files/1/0005/2527/1103/products/1_small.jpg?v=1521019595">
+            <div class="form-group">
+              <span class="required">Last Name</span>
+              <input type="text" formControlName="lastName" placeholder="Last Name">
+              <div *ngIf="f['lastName'].touched && f['lastName'].errors">
+                <small class="help-block" *ngIf="f['lastName'].errors['required']">LastName không được để trống !</small>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <span class="required">Phone</span>
+              <input type="tel" formControlName="phone" placeholder="Phone">
+              <div *ngIf="f['phone'].touched && f['phone'].errors">
+                <small class="help-block" *ngIf="f['phone'].errors['required']">Phone Number không được để trống !</small>
+                <small class="help-block" *ngIf="f['phone'].errors['minlength']">Phone Number tối thiểu 10 kí tự !</small>
+                <small class="help-block" *ngIf="f['phone'].errors['maxlength']">Phone Number tối đa 10 kí tự !</small>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <span class="required">Email</span>
+              <input type="email" formControlName="email" placeholder="Email">
+              <div *ngIf="f['email'].touched && f['email'].errors">
+                <small class="help-block" *ngIf="f['email'].errors['required']">Email không được để trống !</small>
+                <small class="help-block" *ngIf="f['email'].errors['email']">Email không đúng định dạng !</small>
+                <small class="help-block" *ngIf="f['email'].errors['minlength']">Email tối thiểu 12 kí tự !</small>
+              </div>
+            </div>
+
+            <div class="form-group form-w-full">
+              <span class="required">Address</span>
+              <input type="text" formControlName="address" placeholder="Specific Address">
+              <div *ngIf="f['address'].touched && f['address'].errors">
+                <small class="help-block" *ngIf="f['address'].errors['required']">Address không được để trống !</small>
+              </div>
+            </div>
+
+            <div class="form-group form-w-full">
+              <span>Note</span>
+              <textarea placeholder="Content notes"></textarea>
+            </div>
+            <div class="submitorcart">
+              <a routerLink="/cart">
+                <i class="fa-solid fa-angle-left"></i>
+                return to cart
+              </a>
+              <div></div>
+              <button type="submit"  class="btn btn-primary" [disabled]="f['email'].errors || f['phone'].errors || f['lastName'].errors || f['firstName'].errors || f['address'].errors" (click)="thank()" routerLink="/" >Giao hàng ngay</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-4 col-12 mb-4 mb-lg-0">
+        <div class="box-group">
+          <div class="d-flex flex-wrap box-title">
+            <h2 class="title-form">
+              Đơn hàng (1)
+            </h2>
+          </div>
+          <div class="product-quantity-list">
+            <div class="product-quantity-item" *ngFor="let item of products, let i = index">
+              <div class="name">
+                {{item.title}}
+              </div>
+              <div class="count">
+                <img [src]="item.thumbnail">
+              </div>
+            </div>
+          </div>
+          <div class="box-total">
+            <div class="total-item">
+              <span>Subtotal: </span>
+              <span>{{grandTotal}}.000Đ</span>
+            </div>
+            <div class="total-item">
+              <span>Shipping: </span>
+              <span>30.000Đ</span>
             </div>
           </div>
         </div>
-
-        <div class="box-total">
-          <div class="total-item">
-                      <span>
-                        Tạm tính:
-                      </span>
-            <span>
-                        130.000đ
-                      </span>
-          </div>
-
-          <div class="total-item">
-                      <span>
-                        Phí giao hàng:
-                      </span>
-            <span>
-                        30.000đ
-                      </span>
-          </div>
-
+        <div class="box-total-last">
+          <span>TOTAL:</span>
+          <span>{{totalBig}}.000Đ</span>
         </div>
-
       </div>
-
-      <div class="box-total-last">
-        <span>TỔNG THANH TOÁN:</span>
-        <span>160.000đ</span>
-      </div>
-
     </div>
   </div>
 </div>

@@ -1,4 +1,5 @@
 import {Component} from "@angular/core";
+import {CartService} from "../service/cart.service";
 
 @Component({
   selector: 'header',
@@ -6,15 +7,24 @@ import {Component} from "@angular/core";
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent{
+  public totalItem: number = 0;
+  constructor(private cartService: CartService) { }
 
+  ngOnInit(): void {
+    this.cartService.getProducts()
+      .subscribe(res => {
+        this.totalItem = res.length;
+      })
+    this.cartService.getProducts()
+      .subscribe(res => {
+        this.products = res;
+        this.grandTotal = this.cartService.getTotalPrice();
+      })
+  }
+  public products: any = [];
+  public grandTotal !: number;
 
-  onAddToCart(product:any){
-    let cartItem:any={
-      id:product.id,
-      name:product.name,
-      price:product.price,
-      quanlity:1
-    }
-    console.log(product);
+  removeItem(item: any) {
+    this.cartService.removeCartItem(item);
   }
 }

@@ -7,10 +7,10 @@
         </div>
         <div class="header-top-area-row-right">
           <ul>
-            <li><a href="#">My Account</a></li>
-            <li><a routerLink="./mywishlist">My Wish List</a></li>
-            <li><a routerLink="./signin">Sign In</a></li>
-            <li><a routerLink="./product">VNĐ</a></li>
+            <li><a>My Account</a></li>
+            <li><a routerLink="/mywishlist">My Wish List</a></li>
+            <li><a routerLink="/signin">Sign In</a></li>
+            <li><a>VNĐ</a></li>
           </ul>
         </div>
       </div>
@@ -21,7 +21,7 @@
       <div class="header-min-area-row">
         <div class="header-min-area-row-left">
           <div class="header-min-area-row-left-img">
-            <a>
+            <a routerLink="/">
               <img
                 src="https://cdn.shopify.com/s/files/1/0005/2527/1103/files/logo_088078d9-3c51-4b4b-b6cb-ee392baf858b_300x.png?v=1614747198">
             </a>
@@ -43,27 +43,27 @@
                   <i class="fas fa-shopping-cart"></i>
                   My Cart
                 </a>
-                <span class="bigcounter">1</span>
+                <span class="bigcounter">{{totalItem}}</span>
                 <div style="display: none" class="shopping-cart cart-empty-title">
                   <h2>Your cart is currently empty.</h2>
                 </div>
                 <div style="display: block" class="shopping-cart mini-cart">
                   <ul>
-                    <li>
+                    <li *ngFor="let item of products, let i = index">
                       <div class="cart-list">
                         <div class="cart-img">
-                          <a href="#">
-                            <img src="//cdn.shopify.com/s/files/1/0005/2527/1103/products/1_small.jpg?v=1521019595" alt="watch">
+                          <a>
+                            <img [src]="item.thumbnail" alt="watch">
                           </a>
                         </div>
                         <div class="cart-info">
-                          <h4><a href="/products/accusantium-doloremque?variant=6998287810623">accusantium doloremque - xl / yellow / partex</a></h4>
+                          <h4><a>{{item.title}}</a></h4>
                           <div class="cart-price">
-                            <span class="price">Qty: 1 x <span class="money" data-currency-usd="$130.00">$130.00</span></span>
+                            <span class="price">Qty: {{item.quantity}} x <span class="money">{{item.price}}.000Đ</span></span>
                           </div>
                         </div>
                         <div class="pro-del">
-                          <a href="#" title="Remove this item">
+                          <a title="Remove this item" (click)="removeItem(item)">
                             <i class="fa-solid fa-xmark"></i>
                           </a>
                         </div>
@@ -73,17 +73,17 @@
                   <div class="mini-cart-total">
                     <span>Total</span>
                     <span class="total-price shopping-cart__total">
-                      <span class="money">$130.00</span>
+                      <span class="money">{{grandTotal}}.000Đ</span>
                     </span>
                   </div>
                   <div class="cart-button">
-                    <a routerLink=".cart" title="Cart">View Cart</a>
-                    <a href="#" title="Checkout" class="right">Checkout</a>
+                    <a routerLink="/cart" title="Cart">View Cart</a>
+                    <a routerLink="/informationshop" title="Checkout" class="right">Checkout</a>
                   </div>
                 </div>
               </li>
               <li>
-                <a routerLink="./wishlist">
+                <a routerLink="/mywishlist">
                   <i class="far fa-heart"></i>
                   Wishlist
                 </a>
