@@ -6,7 +6,7 @@ import {CartService} from "../service/cart.service";
   templateUrl: './informationshop.component.html',
   styleUrls: ['./informationshop.component.css']
 })
-export class InformationshopComponentComponent{
+export class InformationshopComponent{
   thank() {
     alert('Cảm ơn quý khách đã mua hàng');
   }

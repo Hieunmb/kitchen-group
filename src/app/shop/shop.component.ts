@@ -2,6 +2,7 @@ import {Component} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
 import {ApiService} from "../service/api.service";
 import {CartService} from "../service/cart.service";
+import {WishlistService} from "../service/wishlist.service";
 
 @Component({
   selector: 'shop',
@@ -11,7 +12,7 @@ import {CartService} from "../service/cart.service";
 export class ShopComponent{
 
   public productList: any;
-  constructor(private api: ApiService, private cartService: CartService, private http: HttpClient) { }
+  constructor(private api: ApiService, private cartService: CartService, private http: HttpClient, private wishlistService: WishlistService) { }
 
   ngOnInit(): void {
     this.api.getProduct()
@@ -25,6 +26,9 @@ export class ShopComponent{
   }
   addtocart(item: any) {
     this.cartService.addtoCart(item);
+  }
+  addtoWishList(item: any) {
+    this.wishlistService.addtoWishlist(item)
   }
 
   p: number = 1;
