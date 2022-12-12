@@ -69,7 +69,7 @@ export class HomeComponent{
   productcookwearbestseller: any[] = [];
   productappliancesbestseller: any[] = [];
   demoproduct() {
-    const url = 'http://localhost:5001/product-feature'
+    const url = 'http://localhost:3505/product-feature'
     this.http.get<any>(url)
       .subscribe(data=>{
         this.product = data;
@@ -79,7 +79,7 @@ export class HomeComponent{
       })
   }
   listcookwear() {
-    const url = 'http://localhost:5001/product-cookwear'
+    const url = 'http://localhost:3505/product-cookwear'
     this.http.get<any>(url)
       .subscribe(data=>{
         this.productcookwear = data;
@@ -89,7 +89,7 @@ export class HomeComponent{
       })
   }
   listappliances() {
-    const url = 'http://localhost:5001/product-appliances'
+    const url = 'http://localhost:3505/product-appliances'
     this.http.get<any>(url)
       .subscribe(data=>{
         this.productappliances = data;
@@ -99,7 +99,7 @@ export class HomeComponent{
       })
   }
   listcookingpost() {
-    const url = 'http://localhost:5001/productcookwear-cookingpost'
+    const url = 'http://localhost:3505/productcookwear-cookingpost'
     this.http.get<any>(url)
       .subscribe(data=>{
         this.productcookingpost = data;
@@ -109,7 +109,7 @@ export class HomeComponent{
       })
   }
   listfryingpans() {
-    const url = 'http://localhost:5001/productcookwear-fryingpans'
+    const url = 'http://localhost:3505/productcookwear-fryingpans'
     this.http.get<any>(url)
       .subscribe(data=>{
         this.productfryingpans = data;
@@ -119,7 +119,7 @@ export class HomeComponent{
       })
   }
   listcookwearsets() {
-    const url = 'http://localhost:5001/productcookwear-cookwearsets'
+    const url = 'http://localhost:3505/productcookwear-cookwearsets'
     this.http.get<any>(url)
       .subscribe(data=>{
         this.productcookwearsets = data;
@@ -129,7 +129,7 @@ export class HomeComponent{
       })
   }
   listBlenders() {
-    const url = 'http://localhost:5001/productcookwear-blenders'
+    const url = 'http://localhost:3505/productcookwear-blenders'
     this.http.get<any>(url)
       .subscribe(data=>{
         this.productBlenders = data;
@@ -139,7 +139,7 @@ export class HomeComponent{
       })
   }
   listElectrickettles() {
-    const url = 'http://localhost:5001/productcookwear-electrickettles'
+    const url = 'http://localhost:3505/productcookwear-electrickettles'
     this.http.get<any>(url)
       .subscribe(data=>{
         this.productElectrickettles = data;
@@ -149,7 +149,7 @@ export class HomeComponent{
       })
   }
   listToasters() {
-    const url = 'http://localhost:5001/productcookwear-toasters'
+    const url = 'http://localhost:3505/productcookwear-toasters'
     this.http.get<any>(url)
       .subscribe(data=>{
         this.productToasters = data;
@@ -159,7 +159,7 @@ export class HomeComponent{
       })
   }
   listCookwearBestseller() {
-    const url = 'http://localhost:5001/productcookwear-bestseller'
+    const url = 'http://localhost:3505/productcookwear-bestseller'
     this.http.get<any>(url)
       .subscribe(data=>{
         this.productcookwearbestseller = data;
@@ -169,7 +169,7 @@ export class HomeComponent{
       })
   }
   listAppliancesBestseller() {
-    const url = 'http://localhost:5001/productappliances-bestseller'
+    const url = 'http://localhost:3505/productappliances-bestseller'
     this.http.get<any>(url)
       .subscribe(data=>{
         this.productappliancesbestseller = data;

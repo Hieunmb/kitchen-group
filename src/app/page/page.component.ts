@@ -29,31 +29,31 @@ export class PageComponent{
     this.demorefrigeration();
   }
   demobrandname() {
-    const url = 'http://localhost:5001/brand'
+    const url = 'http://localhost:3505/brand'
     this.http.get<any>(url)
       .subscribe(data=>{
         this.product = data;
       })
   }democookware() {
-    const url = 'http://localhost:5001/cookware'
+    const url = 'http://localhost:3505/cookware'
     this.http.get<any>(url)
       .subscribe(data=>{
         this.cookware = data;
       })
   }demorefrigeration() {
-    const url = 'http://localhost:5001/refrigeration'
+    const url = 'http://localhost:3505/refrigeration'
     this.http.get<any>(url)
       .subscribe(data=>{
         this.refrigeration = data;
       })
   }demoappliances() {
-    const url = 'http://localhost:5001/appliances'
+    const url = 'http://localhost:3505/appliances'
     this.http.get<any>(url)
       .subscribe(data=>{
         this.appliances = data;
       })
   }demofoodstorage() {
-    const url = 'http://localhost:5001/foodstorage'
+    const url = 'http://localhost:3505/foodstorage'
     this.http.get<any>(url)
       .subscribe(data=>{
         this.foodstorage = data;

@@ -80,7 +80,7 @@ export class ProductComponent{
   ];
 
   demoproduct() {
-    const url = 'http://localhost:5001/product-detail1?id='+ this.ids;
+    const url = 'http://localhost:3505/product-detail1?id='+ this.ids;
     this.http.get<any>(url)
       .subscribe(data=>{
         this.product = data;
@@ -92,7 +92,7 @@ export class ProductComponent{
 
   }
   listProductFeature() {
-    const url = 'http://localhost:5001/product-feature'
+    const url = 'http://localhost:3505/product-feature'
     this.http.get<any>(url)
       .subscribe(data=>{
         this.productFeature = data;
