@@ -52,10 +52,14 @@
                 <small class="help-block" *ngIf="f['address'].errors['required']">Address không được để trống !</small>
               </div>
             </div>
-
             <div class="form-group form-w-full">
               <span>Note</span>
               <textarea placeholder="Content notes"></textarea>
+            </div>
+            <div class="payment">
+              <p>Payment methods: </p>
+              <input type="checkbox">
+              <label>Payment in cash</label>
             </div>
             <div class="submitorcart">
               <a routerLink="/cart">
@@ -63,7 +67,7 @@
                 return to cart
               </a>
               <div></div>
-              <button type="submit"  class="btn btn-primary" [disabled]="f['email'].errors || f['phone'].errors || f['lastName'].errors || f['firstName'].errors || f['address'].errors" (click)="thank()" routerLink="/" >Giao hàng ngay</button>
+              <button  (click)="thank(); emptycart()" routerLink="/" type="submit"  class="btn btn-primary" [disabled]="f['email'].errors || f['phone'].errors || f['lastName'].errors || f['firstName'].errors || f['address'].errors" >Delivery right away</button>
             </div>
           </form>
         </div>
@@ -72,7 +76,7 @@
         <div class="box-group">
           <div class="d-flex flex-wrap box-title">
             <h2 class="title-form">
-              Đơn hàng (1)
+              Order ({{products.length}})
             </h2>
           </div>
           <div class="product-quantity-list">

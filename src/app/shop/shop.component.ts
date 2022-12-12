@@ -44,6 +44,9 @@ export class ShopComponent{
     this.http.get<any>(url)
       .subscribe(data => {
         this.productList = data;
+        this.productList.forEach((a: any) => {
+          Object.assign(a, {quantity:1, total:a.price});
+        })
       })
   }
   productRefrigeration(e: any) {
@@ -51,6 +54,9 @@ export class ShopComponent{
     this.http.get<any>(url)
       .subscribe(data => {
         this.productList = data;
+        this.productList.forEach((a: any) => {
+          Object.assign(a, {quantity:1, total:a.price});
+        })
       })
   }
   productAppliances(e: any) {
@@ -58,6 +64,9 @@ export class ShopComponent{
     this.http.get<any>(url)
       .subscribe(data => {
         this.productList = data;
+        this.productList.forEach((a: any) => {
+          Object.assign(a, {quantity:1, total:a.price});
+        })
       })
   }
   productFoodstorage(e: any) {
@@ -65,6 +74,9 @@ export class ShopComponent{
     this.http.get<any>(url)
       .subscribe(data => {
         this.productList = data;
+        this.productList.forEach((a: any) => {
+          Object.assign(a, {quantity:1, total:a.price});
+        })
       })
   }
   productKnivesandtools(e: any) {
@@ -72,6 +84,9 @@ export class ShopComponent{
     this.http.get<any>(url)
       .subscribe(data => {
         this.productList = data;
+        this.productList.forEach((a: any) => {
+          Object.assign(a, {quantity:1, total:a.price});
+        })
       })
   }
   productlist1() {
@@ -79,6 +94,9 @@ export class ShopComponent{
     this.http.get<any>(url)
       .subscribe(data => {
         this.productList = data;
+        this.productList.forEach((a: any) => {
+          Object.assign(a, {quantity:1, total:a.price});
+        })
       })
   }
   productlist2() {
@@ -86,6 +104,9 @@ export class ShopComponent{
     this.http.get<any>(url)
       .subscribe(data => {
         this.productList = data;
+        this.productList.forEach((a: any) => {
+          Object.assign(a, {quantity:1, total:a.price});
+        })
       })
   }
   productlist3() {
@@ -93,6 +114,9 @@ export class ShopComponent{
     this.http.get<any>(url)
       .subscribe(data => {
         this.productList = data;
+        this.productList.forEach((a: any) => {
+          Object.assign(a, {quantity:1, total:a.price});
+        })
       })
   }
   productlist4() {
@@ -100,6 +124,9 @@ export class ShopComponent{
     this.http.get<any>(url)
       .subscribe(data => {
         this.productList = data;
+        this.productList.forEach((a: any) => {
+          Object.assign(a, {quantity:1, total:a.price});
+        })
       })
   }
   productlist(e: any) {

@@ -325,3 +325,10 @@ select::-ms-input-placeholder {
   display: flex;
   justify-content: space-between;
 }
+.payment input {
+  margin:0 2px 14px 10px;
+}
+.payment {
+  display: flex;
+  margin-left: 10px;
+}

@@ -4,6 +4,7 @@ import {HttpClient} from "@angular/common/http";
 import {ActivatedRoute} from "@angular/router";
 import {CartService} from "../service/cart.service";
 import {ApiService} from "../service/api.service";
+import {WishlistService} from "../service/wishlist.service";
 
 @Component({
   selector: 'product',
@@ -47,7 +48,7 @@ export class ProductComponent{
     },
     nav: true
   }
-  constructor(private http: HttpClient, private _router: ActivatedRoute, private cartService: CartService, private api: ApiService) { }
+  constructor(private http: HttpClient, private _router: ActivatedRoute, private cartService: CartService, private wishlistService: WishlistService) { }
   ids: any;
   ngOnInit(): void {
     this.ids = this._router.snapshot.paramMap.get('id');
@@ -60,6 +61,9 @@ export class ProductComponent{
   addtocart(item: any) {
     this.cartService.addtoCart(item);
   }
+  addtoWishList(item: any) {
+    this.wishlistService.addtoWishlist(item);
+  }
   id:any = "details";
   tabChange(ids: any) {
     this.id = ids;
@@ -69,10 +73,10 @@ export class ProductComponent{
     this.id1 = ids1;
   }
   product: any[] = [
-    { id: 1, title: 'trung', price: '12', thumbnail: 'adsd', description: 'haha', category_id: '12', brand_id: 'hani'},
+    { id: 1, title: '', price: 12, thumbnail: '', description: '', category_id: 12, brand_id: '', thumbnail3: '', product_id: 1, thumbnail2: ''},
   ];
   productFeature: any[] = [
-    { id: 1, title: 'trung', price: '12', thumbnail: 'adsd', description: 'haha', category_id: '12', brand_id: 'hani'},
+    { id: 1, title: '', price: 12, thumbnail: '', description: '', category_id: 12, brand_id: ''},
   ];
 
   demoproduct() {
@@ -92,6 +96,9 @@ export class ProductComponent{
     this.http.get<any>(url)
       .subscribe(data=>{
         this.productFeature = data;
+        this.productFeature.forEach((a: any) => {
+          Object.assign(a, {quantity: 1, total: a.price});
+        })
       })
   }
   onActive() {

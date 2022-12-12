@@ -11,7 +11,6 @@
                   style="width: 185px;" alt="logo">
                 <h4 class="mt-1 mb-5 pb-1"></h4>
               </div>
-
               <form action="" [formGroup]="formSub" (submit)="onSub()">
                 <p>Please login to your account</p>
 
@@ -35,9 +34,7 @@
                 </div>
 
                 <div class="text-center pt-1 mb-5 pb-1">
-                  <button class="login" type="submit" [disabled]="f['email'].errors || f['password'].errors">Log in
-<!--                    <a routerLink="./#" id="login1">Log in</a>-->
-                  </button>
+                  <button class="login" type="submit" [disabled]="f['email'].errors || f['password'].errors">Log in</button>
                   <a class="text-muted" href="#">Forgot password?</a>
                 </div>
 

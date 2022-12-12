@@ -39,48 +39,52 @@
           <div class="shopping-area">
             <ul>
               <li class="shopping-area-number">
-                <a routerLink="./cart">
+                <a routerLink="/cart">
                   <i class="fas fa-shopping-cart"></i>
                   My Cart
                 </a>
                 <span class="bigcounter">{{totalItem}}</span>
-                <div style="display: none" class="shopping-cart cart-empty-title">
-                  <h2>Your cart is currently empty.</h2>
-                </div>
-                <div style="display: block" class="shopping-cart mini-cart">
-                  <ul>
-                    <li *ngFor="let item of products, let i = index">
-                      <div class="cart-list">
-                        <div class="cart-img">
-                          <a>
-                            <img [src]="item.thumbnail" alt="watch">
-                          </a>
-                        </div>
-                        <div class="cart-info">
-                          <h4><a>{{item.title}}</a></h4>
-                          <div class="cart-price">
-                            <span class="price">Qty: {{item.quantity}} x <span class="money">{{item.price}}.000Đ</span></span>
+                <ng-container *ngIf="products.length == 0">
+                  <div class="shopping-cart cart-empty-title">
+                    <h2>Your cart is currently empty.</h2>
+                  </div>
+                </ng-container>
+                <ng-container *ngIf="products.length != 0">
+                  <div class="shopping-cart mini-cart">
+                    <ul>
+                      <li *ngFor="let item of products, let i = index">
+                        <div class="cart-list">
+                          <div class="cart-img">
+                            <a routerLink="/product/{{item.id}}">
+                              <img [src]="item.thumbnail" alt="watch">
+                            </a>
+                          </div>
+                          <div class="cart-info">
+                            <h4><a routerLink="/product/{{item.id}}">{{item.title}}</a></h4>
+                            <div class="cart-price">
+                              <span class="price">Qty: {{item.quantity}} x <span class="money">{{item.price}}.000Đ</span></span>
+                            </div>
+                          </div>
+                          <div class="pro-del">
+                            <a title="Remove this item" (click)="removeItem(item)">
+                              <i class="fa-solid fa-xmark"></i>
+                            </a>
                           </div>
                         </div>
-                        <div class="pro-del">
-                          <a title="Remove this item" (click)="removeItem(item)">
-                            <i class="fa-solid fa-xmark"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                  <div class="mini-cart-total">
-                    <span>Total</span>
-                    <span class="total-price shopping-cart__total">
+                      </li>
+                    </ul>
+                    <div class="mini-cart-total">
+                      <span>Total</span>
+                      <span class="total-price shopping-cart__total">
                       <span class="money">{{grandTotal}}.000Đ</span>
                     </span>
+                    </div>
+                    <div class="cart-button">
+                      <a routerLink="/cart" title="Cart">View Cart</a>
+                      <a routerLink="/informationshop" title="Checkout" class="right">Checkout</a>
+                    </div>
                   </div>
-                  <div class="cart-button">
-                    <a routerLink="/cart" title="Cart">View Cart</a>
-                    <a routerLink="/informationshop" title="Checkout" class="right">Checkout</a>
-                  </div>
-                </div>
+                </ng-container>
               </li>
               <li>
                 <a routerLink="/mywishlist">

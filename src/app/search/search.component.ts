@@ -11,29 +11,28 @@ import {FormControl, FormGroup} from "@angular/forms";
 export class SearchComponent {
   classh4: any = 'text-center search-title';
   classproduct: any = 'none';
-  product: any[] = [
-    { id: 1, title: 'trung', price: '12', thumbnail: 'adsd', description: 'haha', category_id: '12', brand_id: 'hani', thumbnail3: 'adsd', product_id: 1, thumbnail2: 'adsd',},
-  ];
+  product: any[] = [];
   constructor(private http: HttpClient) {
 
   }
   searchForm: FormGroup = new FormGroup({
     name: new FormControl(),
   })
-  index: number = 0;
   ngOnInit(){
-    // this.demoproduct();
+
   }
   demoproduct() {
-    if(this.searchForm.value.name != null) {
+    if(this.searchForm.value.name != '') {
       this.classh4 = 'none';
       this.classproduct = 'search-item';
       const url = 'http://localhost:5001/search-product?key='
       this.http.get<any>(url+this.searchForm.value.name)
         .subscribe(data=>{
           this.product = data;
-          this.index = data.length;
         })
+    }else {
+      this.classh4 = 'text-center search-title';
+      this.classproduct = 'none';
     }
 
   }

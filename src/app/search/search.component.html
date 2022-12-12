@@ -7,7 +7,7 @@
             <div class="breadcrumbs-inner">
               <ul class="breadcrumb-list">
                 <li>
-                  <a href="#">Home</a>
+                  <a routerLink="/">Home</a>
                 </li>
                 <li>
                   <span>Search:</span>
@@ -26,7 +26,7 @@
           <div class="header-search">
             <form action="" method="get" [formGroup]="searchForm" (ngSubmit)="demoproduct()">
               <input formControlName="name" type="search" placeholder="Search our store" aria-label="Search our store" value="">
-              <button routerLink="./search" type="submit">
+              <button type="submit">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
             </form>
@@ -45,14 +45,14 @@
             <div class="products-grid-2 mb-30" *ngFor="let m of product; let k = index;">
               <div class="single-product-2" >
                 <div class="product-img">
-                  <a href="#">
-                    <img class="popup_cart_image" src="{{product[k].thumbnail}}" alt="img">
+                  <a routerLink="/product/{{m.id}}">
+                    <img class="popup_cart_image" src="{{m.thumbnail}}" alt="img">
                   </a>
                 </div>
               </div>
               <div class="product-text-2">
                 <h3 class="popup_cart_title">
-                  <a href="#">{{product[k].title}}</a>
+                  <a routerLink="/product/{{m.id}}">{{m.title}}</a>
                 </h3>
                 <div class="rating">
                   <span class="spr-badge">
@@ -70,15 +70,15 @@
                   <ul>
                     <li>
                       <span class="new-price">
-                        <span class="money">{{product[k].price}}.000Đ</span>
+                        <span class="money">{{m.price}}.000Đ</span>
                       </span>
                     </li>
                   </ul>
                 </div>
                 <div class="product-description">
-                  <p>{{product[k].description}}</p>
+                  <p>{{m.description}}</p>
                 </div>
-                <a routerLink="/product/{{product[k].id}}" class="btn" style="background-color: #e23e57; color: #ffffff">Learn More</a>
+                <a routerLink="/product/{{m.id}}" class="btn" style="background-color: #e23e57; color: #ffffff">Learn More</a>
               </div>
             </div>
           </div>

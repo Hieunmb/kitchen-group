@@ -162,12 +162,12 @@
                           <div class="link-button">
                             <ul>
                               <li>
-                                <a class="action-btn cart">
+                                <a (click)="addtocart(m)" class="action-btn cart">
                                   <i class="fa-solid fa-cart-shopping"></i>
                                 </a>
                               </li>
                               <li>
-                                <a class="action--wishlist tile-actions--btn flex wishlist-btn wishlist">
+                                <a (click)="addtoWishList(m)" class="action--wishlist tile-actions--btn flex wishlist-btn wishlist">
                                   <i class="fa-regular fa-heart"></i>
                                 </a>
                               </li>
@@ -257,7 +257,7 @@
                                           </li>
                                         </ul>
                                       </div>
-                                      <a class="cart__menu">
+                                      <a (click)="addtocart(cp)" class="cart__menu">
                                         <span class="addto">Add To Cart</span>
                                       </a>
                                     </div>
@@ -311,7 +311,7 @@
                                           </li>
                                         </ul>
                                       </div>
-                                      <a class="cart__menu">
+                                      <a (click)="addtocart(fp)" class="cart__menu">
                                         <span class="addto">Add To Cart</span>
                                       </a>
                                     </div>
@@ -364,7 +364,7 @@
                                           </li>
                                         </ul>
                                       </div>
-                                      <a class="cart__menu">
+                                      <a (click)="addtocart(cs)" class="cart__menu">
                                         <span class="addto">Add To Cart</span>
                                       </a>
                                     </div>
@@ -433,12 +433,12 @@
                           <div class="link-button">
                             <ul>
                               <li>
-                                <a class="action-btn cart">
+                                <a (click)="addtocart(k)" class="action-btn cart">
                                   <i class="fa-solid fa-cart-shopping"></i>
                                 </a>
                               </li>
                               <li>
-                                <a class="action--wishlist tile-actions--btn flex wishlist-btn wishlist">
+                                <a (click)="addtoWishList(k)" class="action--wishlist tile-actions--btn flex wishlist-btn wishlist">
                                   <i class="fa-regular fa-heart"></i>
                                 </a>
                               </li>
@@ -577,7 +577,7 @@
                                           </li>
                                         </ul>
                                       </div>
-                                      <a class="cart__menu">
+                                      <a (click)="addtocart(b)" class="cart__menu">
                                         <span class="addto">Add To Cart</span>
                                       </a>
                                     </div>
@@ -630,7 +630,7 @@
                                           </li>
                                         </ul>
                                       </div>
-                                      <a class="cart__menu">
+                                      <a (click)="addtocart(ek)" class="cart__menu">
                                         <span class="addto">Add To Cart</span>
                                       </a>
                                     </div>
@@ -683,7 +683,7 @@
                                           </li>
                                         </ul>
                                       </div>
-                                      <a class="cart__menu">
+                                      <a (click)="addtocart(tr)" class="cart__menu">
                                         <span class="addto">Add To Cart</span>
                                       </a>
                                     </div>
@@ -713,7 +713,7 @@
               </div>
             </div>
             <div class="saleproduct-active">
-              <owl-carousel-o [options]="customOptions2">
+              <owl-carousel-o [options]="customOptions">
                 <ng-template carouselSlide *ngFor="let a of productappliances">
                   <div class="slide">
                     <div class="product-item">
@@ -752,12 +752,12 @@
                           <div class="link-button">
                             <ul>
                               <li>
-                                <a class="action-btn cart">
+                                <a (click)="addtocart(a)" class="action-btn cart">
                                   <i class="fa-solid fa-cart-shopping"></i>
                                 </a>
                               </li>
                               <li>
-                                <a class="action--wishlist tile-actions--btn flex wishlist-btn wishlist">
+                                <a (click)="addtoWishList(a)" class="action--wishlist tile-actions--btn flex wishlist-btn wishlist">
                                   <i class="fa-regular fa-heart"></i>
                                 </a>
                               </li>

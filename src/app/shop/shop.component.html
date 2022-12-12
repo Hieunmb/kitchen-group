@@ -7,7 +7,7 @@
             <div class="breadcrumbs-inner">
               <ul class="breadcrumb-list">
                 <li>
-                  <a href="#">Home</a>
+                  <a routerLink="/">Home</a>
                 </li>
                 <li>
                   <span>Shop</span>
@@ -53,32 +53,25 @@
                   <div class="single-left-area">
                     <ul>
                       <li>
-
-<!--                        <input type="radio" name="input" (change)="demoproduct()">-->
                         <label>All CATEGORY</label>
                       </li>
                       <li>
-
                         <input type="radio" name="input" (change)="productCookwear($event)">
                         <label>COOKWEAR</label>
                       </li>
                       <li>
-
                         <input type="radio" name="input" (change)="productRefrigeration($event)">
                         <label>REFRIGERATION</label>
                       </li>
                       <li>
-
                         <input type="radio" name="input" (change)="productAppliances($event)">
                         <label>APPLIANCES</label>
                       </li>
                       <li>
-
                         <input type="radio" name="input" (change)="productFoodstorage($event)">
                         <label>FOOD STORAGE</label>
                       </li>
                       <li>
-
                         <input type="radio" name="input" (change)="productKnivesandtools($event)">
                         <label>KNIVES AND TOOLS</label>
                       </li>
@@ -91,8 +84,6 @@
                   </div>
                   <div class="single-left-area">
                     <ul>
-
-
                       <li *ngFor="let br of brand">
                         <input type="checkbox" >
                         <label>{{br.brandname}}</label>
@@ -113,7 +104,7 @@
                 <div class="tab-menu tab-menu-2">
                   <ul>
                     <li title="Grid view" class="change-view change-view--active" data-view="grid">
-                      <a href="#">
+                      <a>
                         <i class="fa-solid fa-table-cells"></i>
                       </a>
                     </li>

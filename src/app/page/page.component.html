@@ -1,7 +1,7 @@
 <div class="breadcrumbs">
   <div class="container-title">
     <div class="row-cols-2" style="padding-top: 15px">
-      <a href="" class="link-title">Home<i class="fa-solid fa-angle-right"></i></a><span style="color: #9d9b9b">Page</span>
+      <a routerLink="/" class="link-title">Home<i class="fa-solid fa-angle-right"></i></a><span style="color: #9d9b9b">Page</span>
     </div>
   </div>
 </div>
@@ -12,11 +12,11 @@
         <div class="col-md-3">
           <h3 class="abc">our offers</h3>
           <ul class="links">
-            <li><a href="#">New products</a></li>
+            <li><a routerLink="/shop">New products</a></li>
             <li>
-              <a href="#">Brands</a>
+              <a routerLink="/shop">Brands</a>
               <ul class="list-links" *ngFor="let m of product; let i = index;">
-                <li><a href="#">{{product[i].brandname}}</a></li>
+                <li><a routerLink="/shop">{{product[i].brandname}}</a></li>
               </ul>
             </li>
           </ul>
@@ -25,49 +25,49 @@
           <h3 class="abc">categories</h3>
           <ul class="links">
             <li>
-              <a href="#">Cookware</a>
+              <a routerLink="/shop">Cookware</a>
               <ul class="list-links" *ngFor="let m of cookware; let i = index;">
-                <li><a href="#">{{cookware[i].name}}</a></li>
+                <li><a routerLink="/shop">{{cookware[i].name}}</a></li>
               </ul>
             </li>
             <li>
-              <a href="#">Refrigeration</a>
+              <a routerLink="/shop">Refrigeration</a>
               <ul class="list-links" *ngFor="let m of refrigeration; let i = index;">
-                <li><a href="#">{{refrigeration[i].name}}</a></li>
+                <li><a routerLink="/shop">{{refrigeration[i].name}}</a></li>
               </ul>
             </li>
             <li>
-              <a href="#">Appliances</a>
+              <a routerLink="/shop">Appliances</a>
               <ul class="list-links" *ngFor="let m of appliances; let i = index;">
-                <li><a href="#">{{appliances[i].name}}</a></li>
+                <li><a routerLink="/shop">{{appliances[i].name}}</a></li>
               </ul>
             </li>
             <li>
-              <a href="#">Food Storage</a>
+              <a routerLink="/shop">Food Storage</a>
               <ul class="list-links" *ngFor="let m of foodstorage; let i = index;" >
-                <li><a href="#">{{foodstorage[i].name}}</a></li>
+                <li><a routerLink="/shop">{{foodstorage[i].name}}</a></li>
               </ul>
             </li>
             <li>
-              <a href="#">Knives And Tools</a>
+              <a routerLink="/shop">Knives And Tools</a>
             </li>
           </ul>
         </div>
         <div class="col-md-3">
           <h3 class="abc">your account</h3>
           <ul class="links">
-            <li><a href="#">Log in</a></li>
-            <li><a href="#">Register</a></li>
+            <li><a routerLink="/signin">Log in</a></li>
+            <li><a routerLink="/register">Register</a></li>
           </ul>
         </div>
         <div class="col-md-3">
-          <h3 class="abc">pages</h3>
+          <h3 class="abc">EXTRAS</h3>
           <ul class="links">
-            <li><a href="#">Delivery</a></li>
-            <li><a href="#">Terms and conditions of use</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Our stores</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a routerLink="/delivery">Delivery</a></li>
+            <li><a routerLink="/termsandcondition">Terms and conditions of use</a></li>
+            <li><a routerLink="/aboutus">About us</a></li>
+            <li><a routerLink="/shop">Our stores</a></li>
+            <li><a routerLink="/contact">Contact</a></li>
           </ul>
         </div>
       </div>

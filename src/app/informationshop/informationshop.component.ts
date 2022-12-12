@@ -39,6 +39,7 @@ export class InformationshopComponent{
     this.totalBig = this.grandTotal + 30;
   }
   totalBig: number = 0;
-
-
+  emptycart() {
+    this.cartService.removeAllCart();
+  }
 }

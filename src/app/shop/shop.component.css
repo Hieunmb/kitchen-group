@@ -462,9 +462,10 @@ select {
   padding-left: 0;
   text-align: center;
 }
-.page-number ul li {
+.shop-main-area-right .page-number ul li {
   display: inline-block;
   margin: 0;
+  text-decoration: none;
 }
 .pagination ul li a {
   width: 30px;
@@ -474,6 +475,7 @@ select {
   color: #444;
   display: inline-block;
   font-size: 16px;
+  text-decoration: none!important;
 }
 .pagination ul li.active {
   background-color: #e23e57;
@@ -482,3 +484,4 @@ select {
 .pagination ul li.active a {
   color: #fff;
 }
+

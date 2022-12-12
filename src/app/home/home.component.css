@@ -439,6 +439,7 @@ h1 h2 h3 h4 h5 h6 {
   background: #e23e57 none repeat scroll 0 0;
   border-color: #e23e57;
   color: #fff;
+  cursor: pointer;
 }
 /* banner-are */
 .banner-area {
@@ -597,6 +598,7 @@ h1 h2 h3 h4 h5 h6 {
   text-transform: uppercase;
   display: inline-block;
   transition: .3s;
+  cursor: pointer;
 }
 .single-tab .tab-text a.cart__menu:hover {
   background: #e23e57 none repeat scroll 0 0;

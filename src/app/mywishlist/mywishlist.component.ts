@@ -1,6 +1,6 @@
 import {Component} from "@angular/core";
-import {CartService} from "../service/cart.service";
 import {WishlistService} from "../service/wishlist.service";
+import {CartService} from "../service/cart.service";
 
 @Component({
   selector: 'mywishlist',
@@ -9,16 +9,17 @@ import {WishlistService} from "../service/wishlist.service";
 })
 export class MywishlistComponent{
   public products: any = [];
-  public grandTotal !: number;
 
-  constructor(private wishlistService: WishlistService) { }
+  constructor(private wishlistService: WishlistService, private cartService: CartService) { }
 
   ngOnInit(): void {
     this.wishlistService.getProducts()
       .subscribe(res => {
         this.products = res;
-        // this.grandTotal = this.wishlistService.getTotalPrice();
       })
+  }
+  addtocart(item: any) {
+    this.cartService.addtoCart(item);
   }
   removeItem(item: any) {
     this.wishlistService.removeWishlistItem(item);

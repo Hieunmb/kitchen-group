@@ -7,7 +7,7 @@
             <div class="breadcrumbs-inner">
               <ul class="breadcrumb-list">
                 <li>
-                  <a href="#">Home</a>
+                  <a routerLink="/">Home</a>
                 </li>
                 <li>
                   <span>{{product[0].title}}</span>
@@ -58,8 +58,6 @@
           <div class="product-main-area-right">
             <div class="product-info-main">
               <form class="shopify-product-form" method="post">
-                <input type="hidden" name="form_type" value="product">
-                <input type="hidden" name="utf8" value="✓">
                 <div class="page-title">
                   <h1 id="popup_cart_title">{{product[0].title}}</h1>
                 </div>
@@ -90,13 +88,13 @@
                   <button class="addtocart" type="submit" name="add">
                     <span class="addto" (click)="addtocart(product[0])">Add To Cart</span>
                   </button>
-                  <a class="action--wishlist tile-actions--btn flex wishlist-btn wishlist active">
+                  <a (click)="addtoWishList(product[0])" class="action--wishlist tile-actions--btn flex wishlist-btn wishlist active">
                     <i class="fa-regular fa-heart"></i>
                   </a>
                 </div>
                 <div class="Payment_button">
                   <div class="shopify-payment-button">
-                    <button type="button" class="shopify-payment-button__button">Buy it now</button>
+                    <button (click)="addtocart(product[0])" routerLink="/informationshop" type="button" class="shopify-payment-button__button">Buy it now</button>
                   </div>
                 </div>
                 <div class="product-addto-links-text">
@@ -106,17 +104,17 @@
                   <span>Share:</span>
                   <ul>
                     <li>
-                      <a href="#" title="Share on Facebook">
+                      <a title="Share on Facebook">
                         <i class="fa-brands fa-facebook-f" style="font-size: 13px"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="#" title="Share on Twitter">
+                      <a title="Share on Twitter">
                         <i class="fa-brands fa-twitter" style="font-size: 13px"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="#" title="Share on Pinterest">
+                      <a title="Share on Pinterest">
                         <i class="fa-brands fa-pinterest" style="font-size: 13px"></i>
                       </a>
                     </li>
@@ -174,7 +172,7 @@
                           <span class="spr-summary-actions-togglereviews">No reviews yet</span>
                         </span>
                         <span class="spr-summary-actions">
-                          <a href="#" class="spr-summary-actions-newreview">Write a review</a>
+                          <a class="spr-summary-actions-newreview">Write a review</a>
                         </span>
                       </div>
                     </div>
@@ -231,13 +229,13 @@
                         <!--                        <span class="hot-sale sale">Sale</span>-->
                         <!--                        <span class="hot-sale percent">-20%</span>-->
                         <div class="product-img">
-                          <a routerLink="/product/{{ft.id}}">
+                          <a routerLink="/product/{{ft.id}}" (click)="onActive()">
                             <img [src]="ft.thumbnail">
                           </a>
                         </div>
                         <div class="product-text">
                           <h3 class="popup_cart_title">
-                            <a routerLink="/product/{{ft.id}}">{{ft.title}}</a>
+                            <a routerLink="/product/{{ft.id}}" (click)="onActive()">{{ft.title}}</a>
                           </h3>
                           <div class="rating">
                       <span class="spr-badge">
@@ -262,12 +260,12 @@
                           <div class="link-button">
                             <ul>
                               <li>
-                                <a href="#" class="action-btn cart">
+                                <a (click)="addtocart(ft)" class="action-btn cart">
                                   <i class="fa-solid fa-cart-shopping"></i>
                                 </a>
                               </li>
                               <li>
-                                <a href="#" class="action--wishlist tile-actions--btn flex wishlist-btn wishlist">
+                                <a (click)="addtoWishList(ft)" class="action--wishlist tile-actions--btn flex wishlist-btn wishlist">
                                   <i class="fa-regular fa-heart"></i>
                                 </a>
                               </li>
