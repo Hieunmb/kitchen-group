@@ -40,7 +40,7 @@ export class ShopComponent{
     window.scroll(0, 0);
   }
   productCookwear(e: any) {
-    const url = 'http://localhost:5001/product-cookwear'
+    const url = 'http://localhost:3505/product-cookwear'
     this.http.get<any>(url)
       .subscribe(data => {
         this.productList = data;
@@ -50,7 +50,7 @@ export class ShopComponent{
       })
   }
   productRefrigeration(e: any) {
-    const url = 'http://localhost:5001/product-refrigeration'
+    const url = 'http://localhost:3505/product-refrigeration'
     this.http.get<any>(url)
       .subscribe(data => {
         this.productList = data;
@@ -60,7 +60,7 @@ export class ShopComponent{
       })
   }
   productAppliances(e: any) {
-    const url = 'http://localhost:5001/product-appliances'
+    const url = 'http://localhost:3505/product-appliances'
     this.http.get<any>(url)
       .subscribe(data => {
         this.productList = data;
@@ -70,7 +70,7 @@ export class ShopComponent{
       })
   }
   productFoodstorage(e: any) {
-    const url = 'http://localhost:5001/product-foodstorage'
+    const url = 'http://localhost:3505/product-foodstorage'
     this.http.get<any>(url)
       .subscribe(data => {
         this.productList = data;
@@ -80,7 +80,7 @@ export class ShopComponent{
       })
   }
   productKnivesandtools(e: any) {
-    const url = 'http://localhost:5001/product-knivesandtools'
+    const url = 'http://localhost:3505/product-knivesandtools'
     this.http.get<any>(url)
       .subscribe(data => {
         this.productList = data;
@@ -90,7 +90,7 @@ export class ShopComponent{
       })
   }
   productlist1() {
-    const url = 'http://localhost:5001/product-nameasc'
+    const url = 'http://localhost:3505/product-nameasc'
     this.http.get<any>(url)
       .subscribe(data => {
         this.productList = data;
@@ -100,7 +100,7 @@ export class ShopComponent{
       })
   }
   productlist2() {
-    const url = 'http://localhost:5001/product-namedesc'
+    const url = 'http://localhost:3505/product-namedesc'
     this.http.get<any>(url)
       .subscribe(data => {
         this.productList = data;
@@ -110,7 +110,7 @@ export class ShopComponent{
       })
   }
   productlist3() {
-    const url = 'http://localhost:5001/product-priceasc'
+    const url = 'http://localhost:3505/product-priceasc'
     this.http.get<any>(url)
       .subscribe(data => {
         this.productList = data;
@@ -120,7 +120,7 @@ export class ShopComponent{
       })
   }
   productlist4() {
-    const url = 'http://localhost:5001/product-pricedesc'
+    const url = 'http://localhost:3505/product-pricedesc'
     this.http.get<any>(url)
       .subscribe(data => {
         this.productList = data;
@@ -144,7 +144,7 @@ export class ShopComponent{
     }
   }
   productBrand() {
-    const url = 'http://localhost:5001/product-brand'
+    const url = 'http://localhost:3505/product-brand'
     this.http.get<any>(url)
       .subscribe(data => {
         this.brand = data;

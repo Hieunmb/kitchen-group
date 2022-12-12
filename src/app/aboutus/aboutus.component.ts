@@ -24,19 +24,19 @@ export class AboutusComponent{
     this.demobrandcount();
   }
   demoproductcount() {
-    const url = 'http://localhost:5001/count-product'
+    const url = 'http://localhost:3505/count-product'
     this.http.get<any>(url)
       .subscribe(data=>{
         this.product = data;
       })
   }democategorycount() {
-    const url = 'http://localhost:5001/count-category'
+    const url = 'http://localhost:3505/count-category'
     this.http.get<any>(url)
       .subscribe(data=>{
         this.category = data;
       })
   }demobrandcount() {
-    const url = 'http://localhost:5001/count-brand'
+    const url = 'http://localhost:3505/count-brand'
     this.http.get<any>(url)
       .subscribe(data=>{
         this.brand = data;

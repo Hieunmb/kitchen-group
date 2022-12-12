@@ -25,7 +25,7 @@ export class SearchComponent {
     if(this.searchForm.value.name != '') {
       this.classh4 = 'none';
       this.classproduct = 'search-item';
-      const url = 'http://localhost:5001/search-product?key='
+      const url = 'http://localhost:3505/search-product?key='
       this.http.get<any>(url+this.searchForm.value.name)
         .subscribe(data=>{
           this.product = data;
