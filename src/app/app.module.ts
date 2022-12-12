@@ -16,6 +16,7 @@ import {RegisterComponent} from "./register/register.component";
 import {SigninComponent} from "./signin/signin.component";
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import {CartComponent} from "./cart/cart.component";
+import {MyaccountComponent} from "./myaccount/myaccount.component";
 import {ProductComponent} from "./product/product.component";
 import {MywishlistComponent} from "./mywishlist/mywishlist.component";
 import {DeliveryComponent} from "./delivery/delivery.component";
@@ -47,6 +48,7 @@ const appRoutes: Routes = [
   {path:'search',component:SearchComponent},
   {path:'informationshop',component:InformationshopComponent},
   {path:'thank',component:ThankComponent},
+  {path:'myaccount',component:MyaccountComponent},
 ];
 
 @NgModule({
@@ -54,7 +56,7 @@ const appRoutes: Routes = [
     AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent,
     AboutusComponent, ShopComponent, PageComponent, ContactComponent , RegisterComponent ,SigninComponent ,
     CartComponent,ProductComponent,MywishlistComponent, DeliveryComponent, TermsandconditionComponent, SearchComponent,
-    InformationshopComponent, ThankComponent
+    InformationshopComponent, ThankComponent ,MyaccountComponent
   ],
   imports: [
     BrowserModule, RouterModule.forRoot(appRoutes), HttpClientModule, CarouselModule, FormsModule, ReactiveFormsModule,
