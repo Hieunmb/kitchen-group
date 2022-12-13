@@ -74,7 +74,7 @@ h1 h2 h3 h4 h5 h6 {
 .mb-20 {
   margin-bottom: 20px;
 }
-.crumbs {
+.breadcrumbs {
   padding: 15px 0;
   background-color: #f1f1f1;
 }
@@ -291,4 +291,6 @@ h1 h2 h3 h4 h5 h6 {
 .single-product-padding-2 {
   padding-bottom: 80px;
 }
-
+.button-removeall button {
+  padding: 5px;
+}

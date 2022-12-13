@@ -172,6 +172,10 @@ img {
   border-radius: 5px;
   float: right;
 }
+.about-content button:hover {
+  background-color: #252525;
+  border-color: #252525;
+}
 /* our-mission-area */
 .our-mission-area {
   padding-top: 80px;
