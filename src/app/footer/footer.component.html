@@ -59,9 +59,9 @@
                     <input class="email" type="email" name="contact[email]" id="Email" placeholder="email@example.com" formControlName="email" required>
                     <button type="submit" class="button" id="Subscribe" [disabled]="f['email'].errors">Subscribe</button>
                     <div *ngIf="f['email'].touched && f['email'].errors">
-                      <small class="help-block" *ngIf="f['email'].errors['required']">Email không được để trống</small>
-                      <small class="help-block" *ngIf="f['email'].errors['email']">Email không đúng định dạng</small>
-                      <small class="help-block" *ngIf="f['email'].errors['minlength']">Email tối thiểu 12 kí tự</small>
+                      <small class="help-block" *ngIf="f['email'].errors['required']">please enter email !</small>
+                      <small class="help-block" *ngIf="f['email'].errors['email']">please enter a valid email address !</small>
+                      <small class="help-block" *ngIf="f['email'].errors['minlength']">minimum 12 characters for emails !</small>
                     </div>
                   </div>
                 </div>

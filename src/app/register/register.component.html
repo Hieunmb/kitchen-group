@@ -19,9 +19,9 @@
                          aria-describedby="basic-addon1" formControlName="email">
                 </div>
                 <div *ngIf="f['email'].touched && f['email'].errors">
-                  <small class="help-block" *ngIf="f['email'].errors['required']">Email không được để trống !</small>
-                  <small class="help-block" *ngIf="f['email'].errors['email']">Email không đúng định dạng !</small>
-                  <small class="help-block" *ngIf="f['email'].errors['minlength']">Email tối thiểu 12 kí tự !</small>
+                  <small class="help-block" *ngIf="f['email'].errors['required']">please enter your email !</small>
+                  <small class="help-block" *ngIf="f['email'].errors['email']">please enter a valid email address !</small>
+                  <small class="help-block" *ngIf="f['email'].errors['minlength']">minimum 12 characters for emails !</small>
                 </div>
 
                 <div class="input-group mb-3">
@@ -30,7 +30,7 @@
                          aria-describedby="basic-addon1" formControlName="password">
                 </div>
                 <div *ngIf="f['password'].touched && f['password'].errors">
-                  <small class="help-block" *ngIf="f['password'].errors['required']">Password không được để trống !</small>
+                  <small class="help-block" *ngIf="f['password'].errors['required']">please enter Password !</small>
                 </div>
                 <div class="input-group mb-3">
                   <span class="input-group-text"><i class="fa fa-key" aria-hidden="true"></i></span>
@@ -38,7 +38,7 @@
                          aria-describedby="basic-addon1" formControlName="repassword">
                 </div>
                 <div *ngIf="f['repassword'].touched && f['repassword'].errors">
-                  <small class="help-block" *ngIf="f['repassword'].errors['required']">Re-type Password không được để trống !</small>
+                  <small class="help-block" *ngIf="f['repassword'].errors['required']">please enter Re-type Password !</small>
                 </div>
                 <div class="input-group">
                   <span class="input-group-text"><i class="fa fa-user" aria-hidden="true"></i></span>
@@ -46,10 +46,10 @@
                   <input type="text" aria-label="Last name" class="form-control" placeholder="last name" formControlName="lastName">
                 </div>
                 <div *ngIf="f['firstName'].touched && f['firstName'].errors">
-                  <small class="help-block-first" *ngIf="f['firstName'].errors['required']">FirstName không được để trống !</small>
+                  <small class="help-block-first" *ngIf="f['firstName'].errors['required']">please enter FirstName !</small>
                 </div>
                 <div *ngIf="f['lastName'].touched && f['lastName'].errors">
-                  <small class="help-block-last" *ngIf="f['lastName'].errors['required']">LastName không được để trống !</small>
+                  <small class="help-block-last" *ngIf="f['lastName'].errors['required']">please enter LastName !</small>
                 </div>
                 <div class="form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="gioitinh" value="option1">
